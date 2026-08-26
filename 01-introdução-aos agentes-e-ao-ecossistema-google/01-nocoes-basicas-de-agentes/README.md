@@ -1,5 +1,3 @@
-Perfeito. Com base nas **5 partes do curso que você estruturou**, eu faria o README como uma página de apresentação do curso, deixando os conteúdos detalhados dentro de cada pasta. Assim, o repositório fica organizado e profissional para o GitHub.
-
 # 🤖 GEAR: Introdução aos Agentes e ao Ecossistema de Agentes do Google
 
 Este repositório reúne meus estudos e anotações do curso **GEAR — Introdução aos Agentes e ao Ecossistema de Agentes do Google**, com foco nos fundamentos de **Agentes de IA**, sua arquitetura, aplicações e no ecossistema de ferramentas do Google para desenvolvimento de soluções agênticas.
