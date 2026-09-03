@@ -218,5 +218,3 @@ Verifique se:
 ❌ Confundir `description` com `instruction`
 ❌ Esquecer de atribuir o agente à variável `root_agent`
 ❌ Utilizar nomes genéricos ou pouco claros
-
----
