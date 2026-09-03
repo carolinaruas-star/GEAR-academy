@@ -1,4 +1,4 @@
-# 🤖 Otimização do Comportamento de Agentes
+# 🤖 Módulo 3: Otimização do Comportamento de Agentes
 
 ## 📚 Sobre o módulo
 
