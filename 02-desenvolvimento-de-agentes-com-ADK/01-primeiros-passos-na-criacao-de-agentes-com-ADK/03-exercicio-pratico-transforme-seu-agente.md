@@ -220,14 +220,3 @@ Verifique se:
 ❌ Utilizar nomes genéricos ou pouco claros
 
 ---
-
-## 🚀 Próximos passos
-
-O exercício apresenta uma configuração básica de comportamento.
-
-No **curso 3**, serão abordadas técnicas mais avançadas para agentes preparados para produção, incluindo:
-
-* Estruturas de instruções com várias seções
-* Definição de personas e limites
-* Exemplos *few-shot*
-* Padrões profissionais de instruções
