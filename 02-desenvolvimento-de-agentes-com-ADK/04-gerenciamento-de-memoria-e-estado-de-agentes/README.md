@@ -296,12 +296,12 @@ Os conteúdos do módulo seguem uma progressão baseada no problema → soluçã
 │
 ├── 01-session-state-problema.md
 ├── 02-session-state-solucao.md
-├── 04-state-modeling-problema.md
-├── 05-state-modeling-solucao.md
-├── 06-state-namespaces-problema.md
-├── 07-state-namespaces-solucao.md
-├── 08-conclusao.md
-├── 09-badge-conclusao.md
+├── 03-state-modeling-problema.md
+├── 04-state-modeling-solucao.md
+├── 05-state-namespaces-problema.md
+├── 06-state-namespaces-solucao.md
+├── 07-conclusao.md
+├── 08-badge-conclusao.md
 │
 └── README.md
 ```
