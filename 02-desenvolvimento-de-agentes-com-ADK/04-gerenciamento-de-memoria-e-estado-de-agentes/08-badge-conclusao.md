@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.skills.google/">
-    <img src="https://cdn.qwiklabs.com/%2FhM7iJA8VTuHBwzZJzAY1Qm%2FudtbYhi6vAfv1uqzJ9s%3D" width="700"/>
+    <img src="https://cdn.qwiklabs.com/%2FhM7iJA8VTuHBwzZJzAY1Qm%2FudtbYhi6vAfv1uqzJ9s%3D" width="180"/>
   </a>
 </p>
 
