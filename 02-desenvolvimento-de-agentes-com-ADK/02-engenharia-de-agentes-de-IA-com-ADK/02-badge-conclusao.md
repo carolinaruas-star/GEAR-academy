@@ -1,8 +1,8 @@
 ## 🏅 Google Cloud — Engineer AI Agents with Agent Development Kit (ADK)
 
 <p align="center">
-  <a href="https://www.credly.com/badges/433684ce-0639-44f3-961e-4864bfd98bab">
-    <img src="https://images.credly.com/images/000655a5-3837-4c38-b906-2eb9c059ab36/blob" width="180"/>
+  <a href="https://cdn.qwiklabs.com/JfUFl9VXGb%2FP86Cj1l8EcLaPluXkFcqXokROdyHocsE%3D">
+    <img src="https://cdn.qwiklabs.com/JfUFl9VXGb%2FP86Cj1l8EcLaPluXkFcqXokROdyHocsE%3D" width="300"/>
   </a>
 </p>
 
