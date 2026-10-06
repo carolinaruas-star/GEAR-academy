@@ -1,94 +1,115 @@
-# 🤖 Escalonar agentes em toda a empresa
+# 🤖 Curso 4: Escalonar Agentes em Toda a Empresa
 
-> **Programa:** Gemini Enterprise Agent Ready (GEAR)
-> **Gerenciado por:** Google Cloud
-> **Quantidade:** 5 atividades
+[![Google Cloud - Generative AI Leader](https://img.shields.io/badge/Google%20Cloud-Generative%20AI%20Leader-4285F4?logo=googlecloud&logoColor=white)](https://www.skills.google/)
+
+---
+*Guia completo de estratégia, IA centrada em pessoas, orquestração de fluxos multiagente corporativos, RAG e gestão na plataforma Gemini Enterprise.*
+
+---
 
 ## 🎯 Objetivo
 
-Aprender a **criar, coordenar e escalar agentes de IA** para resolver desafios comerciais complexos e apoiar a transformação de IA nas organizações.
+O programa **"Escalonar Agentes em Toda a Empresa"** representa o nível de consolidação executiva e operacional da trilha **GEAR (Gemini Enterprise Agent Ready)** do Google Cloud.
 
-O programa aborda aplicações práticas em diferentes áreas, como **marketing, varejo e manufatura**, além de conceitos relacionados ao equilíbrio entre a **velocidade da automação** e a **supervisão humana**.
-
----
-
-## 📚 Conteúdo do curso
-
-### 1. 👋 Boas-vindas: Escalonar agentes em toda a empresa
-
-**Duração:** 10 minutos
-
-Introdução aos principais conceitos do programa, apresentando como a iniciativa **GEAR** ajuda organizações a ampliar o uso de agentes de IA em diferentes áreas da empresa.
+O curso ensina como criar, coordenar e escalar sistemas de IA generativa para resolver desafios comerciais complexos em setores como marketing, varejo, manufatura e atendimento, equilibrando a velocidade da automação de tarefas com a supervisão e o aumento das capacidades intelectuais humanas (*Human-in-the-Loop*).
 
 ---
 
-### 2. 🤖 Agentes de IA generativa: transforme sua organização
+## 📚 Módulos da Formação
 
-**Duração:** 2 horas e 15 minutos
-
-Exploração do uso de **agentes de IA generativa personalizados** para solucionar desafios específicos das organizações.
-
-O conteúdo aborda aplicações reais e como agentes podem contribuir para a transformação dos processos empresariais.
-
----
-
-### 3. 👥 IA centrada em pessoas
-
-**Duração:** 15 minutos
-
-Apresentação da transição de fluxos de trabalho tradicionalmente orientados a tarefas para uma abordagem baseada na **orquestração de IA centrada nas pessoas**.
-
-O foco está na colaboração entre **pessoas e agentes de IA**, considerando a participação humana na tomada de decisões.
+| Módulo | Título | Descrição / Foco Principal | Status |
+| :---: | :--- | :--- | :---: |
+| **01** | **Agentes de IA Generativa: Transforme sua Organização** | Evolução dos agentes (determinísticos vs. generativos vs. híbridos), parâmetros de amostragem, engenharia de prompts (ReAct/CoT), RAG, Vertex AI Search, CCaaS e Gemini Enterprise. | ✅ Concluído |
+| **02** | **IA Centrada em Pessoas** | Aumento de capacidades intelectuais vs. Automação de tarefas repetitivas, modelo *Human-in-the-Loop*, curadoria de dados e cases corporativos (Warner Bros. Discovery). | ✅ Concluído |
+| **03** | **Orquestrar Fluxos Multiagente com Gemini Enterprise** | Aplicação prática de pipelines multiagente em setores de linha de frente, chão de fábrica, marketing e central de atendimento na plataforma Gemini Enterprise. | ✅ Concluído |
 
 ---
 
-### 4. 🔗 Orquestre fluxos de trabalho multiagente com o Gemini Enterprise
+## 🗺️ Estrutura das Atividades do Programa
 
-**Duração:** 1 hora
-
-Curso voltado à utilização do **Gemini Enterprise** para orquestrar fluxos de trabalho com múltiplos agentes.
-
-Entre os objetivos estão:
-
-* 🔎 Utilizar assistentes com agentes baseados no **Gemini Enterprise**;
-* 🔗 Unificar dados provenientes de fontes próprias e de terceiros;
-* 🤖 Desenvolver e coordenar fluxos de trabalho multiagente;
-* 🧩 Aplicar agentes para solucionar tarefas e desafios empresariais;
-* 🏅 Demonstrar as habilidades desenvolvidas por meio do **Selo de Habilidade**.
+```text
+GEAR: Escalonar Agentes em Toda a Empresa
+│
+├── 1. 👋 Boas-vindas: Escalonar Agentes em Toda a Empresa (10 min)
+├── 2. 🤖 Módulo 01: Agentes de IA Generativa — Transforme sua Organização (2h 15min)
+├── 3. 👤 Módulo 02: IA Centrada em Pessoas (15 min)
+├── 4. 🔗 Módulo 03: Orquestrar Fluxos de Trabalho Multiagente com Gemini Enterprise (1h)
+└── 5. 🏁 Conclusão: Escalonamento de Agentes em Toda a Empresa (10 min)
+```
 
 ---
 
-### 5. 🏁 Conclusão: Escalonamento de agentes em toda a empresa
+## 🧠 Arquitetura e Conceitos-Chave
 
-**Duração:** 10 minutos
+### 🧠 1. Evolução Agêntica e Arquiteturas Híbridas
 
-Revisão das conquistas obtidas ao longo do programa **GEAR** e apresentação das próximas etapas para continuar desenvolvendo habilidades relacionadas a agentes de IA no **Google Cloud**.
+* **Agentes Determinísticos:** Baseados em regras fixas, código e fluxos condicionais para máxima previsibilidade.
+* **Agentes Generativos:** Movidos a LLMs para compreensão de significado, intenção e diálogos abertos.
+* **Agentes Híbridos:** Estruturas corporativas que unem regras rígidas de negócio para etapas críticas com o poder de interpretação dos LLMs.
 
----
+### 👤 2. Governança Centrada em Pessoas (Aumento vs. Automação)
 
-## 🧠 Principais temas
+* **Aumento (Augmentation):** Utilização da IA para expandir o pensamento crítico, a criatividade e a tomada de decisão humana.
+* **Automação (Automation):** Execução automática de processos operacionais, repetitivos e baseados em regras rígidas.
+* **Human-in-the-Loop:** Supervisão humana contínua na curadoria de dados, design de prompts, edição de saídas e métricas de feedback.
 
-Ao longo do curso, os principais conceitos trabalhados serão:
+### 🔄 3. Raciocínio de Repetição: ReAct vs. Chain of Thought (CoT)
 
-* 🤖 Agentes de IA generativa;
-* 🏢 Escalonamento de agentes nas organizações;
-* 🔗 Sistemas e fluxos de trabalho multiagente;
-* 🧩 Orquestração de agentes;
-* 👥 IA centrada em pessoas;
-* 🤝 Colaboração entre humanos e agentes;
-* 📊 Aplicações empresariais de IA;
-* ☁️ Gemini Enterprise e Google Cloud;
-* 🔎 Integração e unificação de dados;
-* ⚖️ Equilíbrio entre automação e supervisão humana.
+* **Chain of Thought (CoT):** Condução do LLM através de etapas de raciocínio interno antes de formular a resposta.
+* **ReAct (Reasoning + Acting):** Ciclo interativo de *Pensar → Agir → Observar → Responder*, acionando ferramentas externas, APIs e bases de dados.
 
----
+### 🏢 4. Ecossistema do Gemini Enterprise e Vertex AI Search
 
-## 🏆 Resultado esperado
-
-Ao concluir o programa, o objetivo é compreender como **agentes de IA podem sair de aplicações isoladas e ser utilizados de forma coordenada em toda uma organização**, apoiando diferentes áreas e processos empresariais.
-
-Além disso, a conclusão do curso **Orquestre fluxos de trabalho multiagente com o Gemini Enterprise** permite demonstrar habilidades relacionadas à criação e coordenação de fluxos de trabalho multiagente por meio do **Selo de Habilidade do Gemini Enterprise**.
+* **Vertex AI Search:** Recuperação e busca semântica em dados estruturados (BigQuery) e não estruturados (PDFs, HTML) com respostas fundamentadas (*grounding*).
+* **Gemini Enterprise:** Plataforma unificada para orquestração de agentes de pesquisa, automações corporativas e integração com o NotebookLM Enterprise.
 
 ---
 
-> 🎯 **Ideia central:** escalar agentes de IA em uma empresa não significa apenas aumentar a quantidade de agentes, mas criar uma estrutura em que **agentes, dados, processos e pessoas trabalhem de forma coordenada** para gerar valor real para a organização.
+## 🛠️ Tecnologias e Ferramentas Utilizadas
+
+* **Modelos de Linguagem:** Gemini 2.5 Flash / Gemini Enterprise
+* **Plataformas de Prototipagem & Nuvem:** Google AI Studio, Vertex AI Studio e GCP
+* **Soluções & Ferramentas:** Vertex AI Search, Document AI, Google Maps API, Cloud Run e AppSheet
+* **Atendimento ao Cliente:** Central de Atendimento como Serviço (CCaaS), Agent Assist e Insights de Conversação
+
+---
+
+## 🏆 Credenciais e Selos Adquiridos
+
+* 🏅 **Completion Badge:** Agentes de IA generativa: transforme sua organização
+* 🏅 **Completion Badge:** IA centrada em pessoas
+* 🏅 **Skill Badge:** Orchestrate Multi-agent Workflows with Gemini Enterprise
+
+---
+
+## 📂 Estrutura das Pastas no Repositório
+
+```text
+04-lider-em-ia-generativa/
+├── 01-agentes-de-ia-generativa-transforme-sua-organizacao/
+│   ├── 01-introducao-e-evolucao-dos-agentes.md
+│   ├── 02-como-usar-modelos.md
+│   ├── ...
+│   └── 12-badge-conclusao.md
+├── 02-ia-centrada-em-pessoas/
+│   ├── 01-como-implementar-agentes-IA.md
+│   └── 02-badge-conclusao.md
+├── 03-orquestrar-fluxos-multiagente-com-gemini-enterprise/
+│   ├── 01-introducao.md
+│   └── 02-badge-conclusao_2.md
+└── README.md
+```
+---
+
+<div align="center">
+
+## 👩‍💻 Autora
+
+**Ana Carolina Pereira Ruas**  
+Engenheira Florestal  
+**Foco em Dados, Machine Learning, IA Generativa, LLMs, Agentes e Cloud**  
+
+---
+⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
+
+</div>
