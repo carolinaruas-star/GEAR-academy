@@ -4,6 +4,7 @@
 
 ---
 *Estratégia de implementação focada no fator humano: o equilíbrio entre o aumento das capacidades intelectuais e a automação de processos.*
+
 ---
 
 ## 📌 Visão Geral do Módulo
