@@ -1,210 +1,143 @@
-# 🤖 Módulo 3: Otimização do Comportamento de Agentes
+# 🤖 Módulo 3 — Otimização do Comportamento de Agentes de IA com ADK
 
-## 📚 Sobre o módulo
+[![Google Cloud - Optimize Agent Behavior](https://img.shields.io/badge/Google%20Cloud-Optimize%20Agent%20Behavior-4285F4?logo=googlecloud&logoColor=white)](./10-badge-conclusao.md)
 
-Este módulo apresenta técnicas para **otimizar o comportamento de agentes de IA**, evoluindo de agentes básicos para agentes mais **estruturados, previsíveis, seguros e eficientes**.
-
-Durante os estudos, foram explorados recursos do **Google Agent Development Kit (ADK)** para controlar como os agentes recebem instruções, estruturam suas respostas, utilizam modelos e lidam com problemas complexos.
+Este módulo aborda as técnicas avançadas de **engenharia e otimização do comportamento de Agentes de IA** utilizando o **Google Agent Development Kit (ADK)**. O conteúdo foca na evolução de agentes reativos simples para o desenvolvimento de sistemas profissionais **previsíveis, estruturados, seguros e otimizados para produção**.
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos do Módulo
 
-Ao longo do módulo, foram trabalhados os seguintes objetivos:
-
-* 🧠 Criar instruções avançadas e reutilizáveis;
-* 📦 Produzir saídas estruturadas utilizando esquemas Pydantic;
-* ⚙️ Configurar modelos de acordo com diferentes tipos de tarefas;
-* 🔐 Ajustar parâmetros de segurança e geração;
-* 🔍 Utilizar planejamento para problemas complexos;
-* 🛠️ Desenvolver agentes mais consistentes e preparados para aplicações reais.
+- 🧠 **Instruções Estruturadas:** Substituir prompts vagos por um framework de 5 pilares (*Identidade, Missão, Metodologia, Limites e Few-Shot*) em Markdown.
+- 📦 **Saídas Estruturadas (`output_schema`):** Garantir respostas determinísticas através de objetos **Pydantic `BaseModel`** e persistir estados com `output_key`.
+- ⚙️ **Configuração Estratégica de Modelos:** Ajustar a **temperatura**, **limites de tokens** e **Safety Settings** via `GenerateContentConfig` para equilibrar qualidade, consistência, segurança e custo.
+- 🔍 **Raciocínio e Planejamento em Múltiplas Etapas:** Capacitar os agentes a resolver problemas complexos com o **`BuiltInPlanner`** e **`ThinkingConfig`**.
 
 ---
 
-## 🗂️ Conteúdos do módulo
+## 📚 Conteúdo do Módulo
 
-### ✍️ 01 — Advanced Instruction Writing
-
-Exploração de técnicas para criar instruções mais completas e controlar o comportamento dos agentes.
-
-**Conteúdos:**
-
-* Identidade e persona;
-* Missão;
-* Metodologia;
-* Limites;
-* Exemplos `few-shot`;
-* Templates reutilizáveis;
-* Organização das instruções com Markdown.
-
-📄 **Arquivos:**
-
-* [`01-advanced-instruction-writing-problema.md`](./01-advanced-instruction-writing-problema.md)
-* [`02-advanced-instruction-writing-solucao.md`](./02-advanced-instruction-writing-solucao.md)
+| Seção | Descrição / Foco Principal | Arquivos |
+| :--- | :--- | :---: |
+| **01 — Instruções Profissionais** | Como estruturar comportamentos previsíveis usando os 5 padrões (Identidade, Missão, Metodologia, Limites e Few-shot). | [Problema](./01-advanced-instruction-writing-problema.md) / [Solução](./02-advanced-instruction-writing-solucao.md) |
+| **02 — Saídas Estruturadas** | Uso do `output_schema` com Pydantic `BaseModel` e `output_key` para integração com sistemas e workflows. | [Problema](./03-structured-output-problema.md) / [Solução](./04-structured-output-solucao.md) |
+| **03 — Seleção e Configuração de Modelos** | Otimização estratégica usando Gemini 2.5 Pro/Flash, `GenerateContentConfig`, temperatura e segurança. | [Problema](./05-escolhendo-e-config-modelos-problema.md) / [Solução](./06-escolhendo-e-config-modelos-solucao.md) |
+| **04 — Planejamento Estruturado** | Decomposição de tarefas complexas e raciocínio em múltiplas etapas com `BuiltInPlanner` e `ThinkingConfig`. | [Problema](./07-planning-for-complex-tasks-problem.md) / [Solução](./08-planning-for-complex-tasks-solution.md) |
+| **05 — Conclusão do Módulo** | Síntese dos 4 pilares, checklists de boas práticas e tabela de referência rápida. | [Acessar](./09-conclusao.md) |
+| **06 — Badge de Conclusão** | Registro da conquista do selo oficial *Optimize Agent Behavior*. | [Acessar](./10-badge-conclusao.md) |
 
 ---
 
-### 📦 02 — Structured Output
-
-Estudo da utilização de **saídas estruturadas** para transformar respostas de linguagem natural em dados previsíveis e integráveis com sistemas.
-
-**Conteúdos:**
-
-* `output_schema`;
-* Pydantic `BaseModel`;
-* `Field`;
-* `output_key`;
-* JSON estruturado;
-* Validação de dados;
-* Fluxo de informações entre agentes.
-
-📄 **Arquivos:**
-
-* [`03-structured-output-problema.md`](./03-structured-output-problema.md)
-* [`04-structured-output-solucao.md`](./04-structured-output-solucao.md)
-
----
-
-### ⚙️ 03 — Escolhendo e Configurando Modelos
-
-Estudo da seleção estratégica de modelos e dos parâmetros que controlam seu comportamento.
-
-**Conteúdos:**
-
-* Gemini 2.5 Pro;
-* Gemini 2.5 Flash;
-* `GenerateContentConfig`;
-* `temperature`;
-* `top_p`;
-* `top_k`;
-* `max_output_tokens`;
-* `SafetySetting`;
-* Otimização de custo e desempenho.
-
-📄 **Arquivos:**
-
-* [`05-escolhendo-e-config-modelos-problema.md`](./05-escolhendo-e-config-modelos-problema.md)
-* [`06-escolhendo-e-config-modelos-solucao.md`](./06-escolhendo-e-config-modelos-solucao.md)
-
----
-
-### 🧠 04 — Planning for Complex Tasks
-
-Estudo do planejamento para agentes que precisam lidar com **problemas complexos e múltiplas etapas**.
-
-**Conteúdos:**
-
-* `BuiltInPlanner`;
-* `PlanReActPlanner`;
-* `ThinkingConfig`;
-* `thinking_budget`;
-* `include_thoughts`;
-* Planejamento estruturado;
-* Diferença entre planejamento e sistemas multiagentes.
-
-📄 **Arquivos:**
-
-* [`07-planning-for-complex-tasks-problem.md`](./07-planning-for-complex-tasks-problem.md)
-* [`08-planning-for-complex-tasks-solution.md`](./08-planning-for-complex-tasks-solution.md)
-
----
-
-## 🧩 Principais conceitos
-
-| Conceito                   | Função                                     |
-| -------------------------- | ------------------------------------------ |
-| 🧠 `instruction`           | Define o comportamento do agente           |
-| 📦 `output_schema`         | Define a estrutura da saída                |
-| 🔑 `output_key`            | Armazena e transmite resultados            |
-| ⚙️ `GenerateContentConfig` | Configura a geração do modelo              |
-| 🌡️ `temperature`          | Controla a variação das respostas          |
-| 🔐 `SafetySetting`         | Define filtros de segurança                |
-| 🔍 `BuiltInPlanner`        | Permite planejamento com modelos Gemini    |
-| 🧠 `ThinkingConfig`        | Configura recursos de pensamento           |
-| 🎯 `thinking_budget`       | Define o orçamento destinado ao pensamento |
-
----
-
-## 🧠 Evolução do agente
-
-O módulo apresenta uma evolução progressiva:
+## 🧩 Os 4 Pilares da Otimização de Agentes
 
 ```text
-🤖 Agente básico
-      │
-      ▼
-🧠 Instruções avançadas
-      │
-      ▼
-📦 Saída estruturada
-      │
-      ▼
-⚙️ Configuração estratégica
-      │
-      ▼
-🔍 Planejamento
-      │
-      ▼
-🚀 Agente mais robusto
+              🤖 AGENTE PROFISSIONAL DE IA
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+   🧠 INSTRUÇÃO    📦 ESTRUTURA    ⚙️ CONFIGURAÇÃO
+  (Comportamento)   (Dados JSON)      (Modelo/LLM)
+        │              │              │
+        └──────────────┼──────────────┘
+                       │
+                       ▼
+                🧠 PLANEJAMENTO
+              (Múltiplas Etapas)
+                       │
+                       ▼
+              🎯 SOLUÇÃO COMPLETA
+
 ```
 
-Cada etapa adiciona uma camada de controle ao agente, permitindo maior **previsibilidade, consistência e adequação ao objetivo da aplicação**.
+---
+
+### 1. 🧠 Instruções Estruturadas (Framework de 5 Padrões)
+
+As instruções profissionais superam comandos genéricos ao definir explicitamente:
+
+1. **👤 Identidade:** Persona, nome e especialização do agente.
+
+
+2. **🎯 Missão:** Objetivo principal e diretrizes centrais.
+
+
+3. **🔄 Metodologia:** Passos estruturados de execução (*Reconhecer ➔ Esclarecer ➔ Resolver ➔ Verificar*).
+
+
+4. **🛡️ Limites:** Regras explícitas do que o agente **NUNCA** deve fazer.
+
+
+5. **💬 Exemplos Few-Shot:** Pares de entrada/saída orientando tom e formato.
+
+
 
 ---
 
-## 💡 Principais aprendizados
+### 2. 📦 Saída Estruturada (`output_schema` + Pydantic)
 
-### 🧠 Instruções
+Transforma texto livre em um **contrato de dados previsível** para sistemas externos:
 
-Uma instrução bem construída funciona como uma **especificação de comportamento**, definindo identidade, missão, metodologia, limites e exemplos.
+```python
+from google.adk.agents import LlmAgent
+from pydantic import BaseModel, Field
 
-### 📦 Estrutura de dados
+class ProductInfo(BaseModel):
+    product_name: str = Field(description="Nome do produto")
+    price: float = Field(description="Preço em USD")
+    storage: str = Field(description="Capacidade de armazenamento")
 
-O `output_schema` estabelece um **contrato para a saída do agente**, facilitando a integração com aplicações, APIs, bancos de dados e outros agentes.
+root_agent = LlmAgent(
+    model="gemini-2.5-flash",
+    instruction="Extrair informações de produto.",
+    output_schema=ProductInfo,      # Contrato Pydantic
+    output_key="extracted_product"  # Salva no estado da sessão
+)
 
-### ⚙️ Configuração
-
-A escolha do modelo e dos parâmetros deve considerar o equilíbrio entre **qualidade, custo, velocidade e segurança**.
-
-### 🔍 Planejamento
-
-O planejamento é especialmente útil para tarefas que exigem **múltiplas etapas, análise de alternativas e tomada de decisão estruturada**.
-
----
-
-## 🏁 Conclusão
-
-Ao concluir este módulo, os conhecimentos adquiridos permitem desenvolver agentes de IA com maior controle sobre:
-
-* 🧠 **Comportamento**
-* 📦 **Estrutura das respostas**
-* ⚙️ **Configuração dos modelos**
-* 🔐 **Segurança**
-* 🔍 **Planejamento**
-
-O resultado é uma evolução de agentes simplesmente reativos para sistemas mais **estruturados, eficientes e preparados para cenários reais de aplicação**.
-
-📄 Para consultar a conclusão completa:
-
-➡️ [`09-conclusao.md`](./09-conclusao.md)
+```
 
 ---
 
-## 🎓 Certificação
+### 3. ⚙️ Configuração Estratégica (`GenerateContentConfig`)
 
-O módulo foi concluído com sucesso na plataforma **Google Cloud Skills Boost**.
+Ajusta os parâmetros de amostragem de acordo com o objetivo da tarefa:
 
-📄 Registro da conclusão:
-
-➡️ [`10-badge-conclusao.md`](./10-badge-conclusao.md)
+| Perfil | Modelo | Temperatura | Casos de Uso |
+| --- | --- | --- | --- |
+| **Factual / Determinístico** | Gemini 2.5 Flash | `0.0 – 0.3` | Extração de dados, JSON, classificações e finanças.|
+| **Equilibrado** | Gemini 2.5 Flash / Pro | `0.4 – 0.7` | Atendimento ao cliente, suporte técnico e chats gerais.|
+| **Criativo** | Gemini 2.5 Pro | `0.8 – 1.0` | Brainstorming, marketing e geração de ideias.|
 
 ---
 
-## 📌 Estrutura do módulo
+### 4. 🔍 Planejamento Estruturado (`BuiltInPlanner`)
+
+Habilita a capacidade de raciocínio prévio em várias etapas para problemas complexos:
+
+```python
+from google.adk.agents import LlmAgent
+from google.adk.planners import BuiltInPlanner
+from google.genai import types
+
+planning_agent = LlmAgent(
+    model="gemini-2.5-flash",
+    instruction="Analise problemas estratégicos de negócios.",
+    planner=BuiltInPlanner(
+        thinking_config=types.ThinkingConfig(
+            include_thoughts=True, # Raciocínio visível para debug
+            thinking_budget=2048   # Orçamento de tokens para pensamento
+        )
+    )
+)
+
+```
+
+---
+
+## 🗂️ Estrutura da Pasta
 
 ```text
 03-otimizacao-do-comportamento-de-agentes/
-│
+├── README.md
 ├── 01-advanced-instruction-writing-problema.md
 ├── 02-advanced-instruction-writing-solucao.md
 ├── 03-structured-output-problema.md
@@ -214,20 +147,18 @@ O módulo foi concluído com sucesso na plataforma **Google Cloud Skills Boost**
 ├── 07-planning-for-complex-tasks-problem.md
 ├── 08-planning-for-complex-tasks-solution.md
 ├── 09-conclusao.md
-├── 10-badge-conclusao.md
-│
-└── README.md
+└── 10-badge-conclusao.md
+
 ```
+<div align="center">
+
+## 👩‍💻 Autora
+
+**Ana Carolina Pereira Ruas**  
+Engenheira Florestal  
+**Foco em Dados, Machine Learning, IA Generativa, LLMs, Agentes e Cloud**  
 
 ---
+⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
 
-## 🚀 Próxima etapa
-
-Com os fundamentos de **otimização do comportamento dos agentes** concluídos, o próximo passo da trilha é avançar para recursos que permitem aos agentes **utilizar ferramentas, acessar informações externas e executar tarefas**, aproximando-os de aplicações agentivas mais completas.
-
----
-
-<p align="center">
-  <strong>🤖 Google Agent Development Kit (ADK)</strong><br>
-  Construindo agentes mais inteligentes, estruturados e eficientes.
-</p>
+</div>
