@@ -11,7 +11,7 @@
 
 Em aplicações corporativas complexas, utilizar um único agente e um prompt monolítico torna o sistema frágil e imprevisível. Este módulo aborda a construção de **sistemas multiagentes modulares e distribuídos** com o **Agent Development Kit (ADK)**.
 
-Ao longo do módulo, exploramos a orquestração através de árvores hierárquicas (agente pai → subagentes)[cite: 30], a comunicação entre agentes remotos via protocolo **Agent2Agent (A2A)**, a integração de ferramentas via **Model Context Protocol (MCP)** e a resolução de desafios de engenharia (*Challenge Lab*) para colocar ecossistemas completos em produção no **Vertex AI Agent Engine** com interface gráfica web.
+Ao longo do módulo, exploramos a orquestração através de árvores hierárquicas (agente pai → subagentes), a comunicação entre agentes remotos via protocolo **Agent2Agent (A2A)**, a integração de ferramentas via **Model Context Protocol (MCP)** e a resolução de desafios de engenharia (*Challenge Lab*) para colocar ecossistemas completos em produção no **Vertex AI Agent Engine** com interface gráfica web.
 
 ---
 
