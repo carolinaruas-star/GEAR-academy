@@ -29,7 +29,5 @@
 
 A escolha da plataforma deve considerar o **nível de complexidade, controle, personalização e conhecimento técnico** necessário.
 
-### 🎖️ Badge
-
-[![Google Cloud - Enterprise Agents and Use Cases](https://cdn.qwiklabs.com/aTjhs5m5cTkVfzh0IZFyDOQVEKJeA5v7JVJAGY8rQHs%3D)](https://cdn.qwiklabs.com/aTjhs5m5cTkVfzh0IZFyDOQVEKJeA5v7JVJAGY8rQHs%3D)
+#
 
