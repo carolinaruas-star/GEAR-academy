@@ -32,7 +32,9 @@ Na prática, o laboratório demonstrou como um agente pode deixar de depender ex
 
 Ao final do laboratório, o agente foi modificado com sucesso para utilizar uma nova ferramenta disponibilizada pelo servidor MCP, permitindo consultas sobre **criptomoedas em tempo real**.
 
-**Status:** ✅ Concluído
-**Dificuldade:** Introdutório
-**Duração:** 20 minutos
-**Créditos:** 1
+| Item | Detalhe |
+| :--- | :--- |
+| **Status** | ✅ Concluído |
+| **Dificuldade** | Introdutório |
+| **Duração** | 20 minutos |
+| **Créditos** | 1 |
