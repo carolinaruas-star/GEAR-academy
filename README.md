@@ -24,10 +24,10 @@ A plataforma técnica por trás do programa é o **Gemini Enterprise Agent Platf
 | 🔴 Sessão Técnica 1: Fundamentos | 26/08/2026 |Concluído ☑️|
 | Construir (autônomo) | 26/08 – 02/09 |Concluído ☑️|
 | 🔴 Sessão Técnica 2: Construção | 02/09/2026 |Concluído ☑️|
-| Implementar (autônomo) | 02/09 – 09/09 | |
-| 🔴 Sessão Técnica 3: Implementação | 09/09/2026 | |
-| Escalar (autônomo) | 09/09 – 16/09 | |
-| Finalização do curso | 17/09 – 21/09 | |
+| Implementar (autônomo) | 02/09 – 09/09 |Concluído ☑️|
+| 🔴 Sessão Técnica 3: Implementação | 09/09/2026 |Concluído ☑️|
+| Escalar (autônomo) | 09/09 – 16/09 |Concluído ☑️|
+| Finalização do curso | 17/09 – 21/09 |Concluído ☑️|
 
 
 ## 🗂️ Estrutura do repositório
