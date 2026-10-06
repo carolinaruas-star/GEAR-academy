@@ -1,40 +1,104 @@
-## 🧪 Laboratório — Adicionar ferramentas de moeda a um agente usando o MCP
+# 🧪 Módulo 6 — Laboratório: Adicionar Ferramentas de Moeda a um Agente Usando o MCP
 
-### 🎯 Objetivo
+[![Google Cloud - Add Agent Capabilities with Tools](https://img.shields.io/badge/Google%20Cloud-Lab%20Currency%20Tools%20MCP-4285F4?logo=googlecloud&logoColor=white)](../05-inclusao-de-habilidades-agenticas-com-ferramentas/12-badge-conclusao.md)
 
-Modificar um agente desenvolvido com o **Google Agent Development Kit (ADK)** para utilizar ferramentas externas por meio do **Model Context Protocol (MCP)**, permitindo que o agente acesse informações que não estavam disponíveis em seu comportamento inicial.
+---
 
-### 🛠️ Tecnologias e conceitos
+## 🎯 Objetivo do Laboratório
 
-* 🤖 **Google Agent Development Kit (ADK)**
-* 🔌 **Model Context Protocol (MCP)**
-* 🔗 **A2A (Agent2Agent)**
-* 🐍 **Python**
-* ⚡ **uv**
-* 🌐 **API pública da Coinbase**
-* 💱 Dados de moedas fiduciárias e criptomoedas
+Modificar um agente de conversão financeira desenvolvido com o **Google Agent Development Kit (ADK)** para integrar novas ferramentas externas através do **Model Context Protocol (MCP)**[cite: 58]. 
 
-### 🔬 Prática realizada
+A prática demonstra como estender as capacidades de um agente que lidava apenas com moedas fiduciárias, habilitando consultas em tempo real ao preço de criptomoedas via integração com API externa no servidor MCP[cite: 58].
 
-O laboratório foi desenvolvido em duas etapas principais:
+---
 
-**Antes:** o agente de moeda conseguia consultar taxas de câmbio entre moedas fiduciárias, como USD/EUR e USD/CNY, mas não possuía uma ferramenta para consultar o preço atual de criptomoedas.
+## 🛠️ Tecnologias e Conceitos Aplicados
 
-**Depois:** foi criada a ferramenta `get_crypto_price` no servidor MCP, utilizando a API pública da Coinbase. Após reiniciar os servidores MCP e A2A, o agente passou a conseguir utilizar essa ferramenta para consultar o preço atual do Bitcoin.
+- 🤖 **Google Agent Development Kit (ADK):** Framework para orquestração e execução do agente raiz[cite: 58].
+- 🔌 **Model Context Protocol (MCP):** Protocolo padronizado para conexão entre o agente e ferramentas externas[cite: 58].
+- 🔗 **A2A (Agent2Agent):** Protocolo de comunicação e delegação entre agentes do ADK[cite: 58].
+- ⚡ **FastMCP & uv:** Gerenciamento de ambiente Python de alta performance para execução do servidor MCP[cite: 58].
+- 🌐 **Coinbase Spot Price API:** Endpoint público de dados financeiros em tempo real[cite: 58].
 
-### 💡 Principal aprendizado
+---
 
-> O **MCP funciona como uma ponte padronizada entre agentes de IA e ferramentas ou serviços externos**, permitindo ampliar as capacidades do agente sem precisar incorporar diretamente toda a lógica ou integração ao próprio agente.
+## 🔬 Evolução da Prática (Antes vs. Depois)
 
-Na prática, o laboratório demonstrou como um agente pode deixar de depender exclusivamente de seu conhecimento interno e passar a **consultar dados externos e atualizados por meio de ferramentas**.
+```text
+ ❌ ANTES (Agente Limitado)
+ ┌───────────────┐        ┌────────────────────────┐
+ │  Usuário:     │ ─────> │ Agente de Moedas (ADK) │ ─────> ❌ Sem suporte a criptomoedas
+ │ "Preço do BTC"│        │ (Apenas USD/EUR/CNY)   │        (Ferramenta ausente)
+ └───────────────┘        └────────────────────────┘
 
-### 🚀 Resultado
+ -----------------------------------------------------------------------------------------
 
-Ao final do laboratório, o agente foi modificado com sucesso para utilizar uma nova ferramenta disponibilizada pelo servidor MCP, permitindo consultas sobre **criptomoedas em tempo real**.
+ ✅ DEPOIS (Habilitado via MCP)
+ ┌───────────────┐        ┌────────────────────────┐        ┌────────────────────────┐
+ │  Usuário:     │ ─────> │ Agente de Moedas (ADK) │ ─────> │ Servidor MCP (FastMCP) │
+ │ "Preço do BTC"│        │ (Orquestração ADK/A2A) │        │ get_crypto_price()     │
+ └───────────────┘        └────────────────────────┘        └───────────┬────────────┘
+                                                                        │
+                                                                        ▼
+                                                            🌐 Coinbase Public API
+
+```
+
+1. **Antes:** O agente de moedas atendia a consultas de taxas de câmbio entre moedas fiduciárias tradicionais (ex: USD/EUR, USD/CNY), mas falhava ao solicitar preços de criptomoedas por falta de ferramentas e dados no modelo.
+
+
+2. **Depois:** Foi desenvolvida e registrada a função `@mcp.tool()` denominada `get_crypto_price` no servidor MCP em Python/FastMCP, consultando a API da Coinbase em tempo real. Após o restart dos serviços MCP e A2A, o agente passou a orquestrar e responder cotações atualizadas do Bitcoin (BTC-USD).
+
+
+
+---
+
+## 💻 Implementação da Tool no Servidor MCP
+
+```python
+import httpx
+from mcp.server.fastmcp import FastMCP
+
+mcp = FastMCP("Currency Service")
+
+@mcp.tool()
+def get_crypto_price(currency_pair: str = "BTC-USD") -> dict:
+    """Obtém o preço atual de um par de criptomoedas via API da Coinbase."""
+    url = f"[https://api.coinbase.com/v2/prices/](https://api.coinbase.com/v2/prices/){currency_pair}/spot"
+    response = httpx.get(url)
+    return response.json()["data"]
+
+```
+
+---
+
+## 💡 Principal Aprendizado
+
+> O **Model Context Protocol (MCP)** atua como um adaptador universal entre o ecossistema de agentes e serviços externos. Ele permite expandir dinamicamente o conjunto de habilidades (*skills*) de um agente sem a necessidade de reescrever a arquitetura interna do modelo ou alterar seu pipeline principal de orquestração.
+> 
+> 
+
+---
+
+## 📊 Ficha Técnica do Laboratório
 
 | Item | Detalhe |
-| :--- | :--- |
+| --- | --- |
 | **Status** | ✅ Concluído |
 | **Dificuldade** | Introdutório |
 | **Duração** | 20 minutos |
 | **Créditos** | 1 |
+
+---
+
+<div align="center">
+
+## 👩‍💻 Autora
+
+**Ana Carolina Pereira Ruas**  
+Engenheira Florestal  
+**Foco em Dados, Machine Learning, IA Generativa, LLMs, Agentes e Cloud**  
+
+---
+⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
+</div>
