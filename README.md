@@ -22,8 +22,8 @@ A plataforma técnica por trás do programa é o **Gemini Enterprise Agent Platf
 | 🔴 Kick-off (ao vivo) | 19/08/2026 |Concluído ☑️|
 | Aprender (autônomo) | 19/08 – 26/08 |Concluído ☑️|
 | 🔴 Sessão Técnica 1: Fundamentos | 26/08/2026 |Concluído ☑️|
-| Construir (autônomo) | 26/08 – 02/09 | |
-| 🔴 Sessão Técnica 2: Construção | 02/09/2026 | |
+| Construir (autônomo) | 26/08 – 02/09 |Concluído ☑️|
+| 🔴 Sessão Técnica 2: Construção | 02/09/2026 |Concluído ☑️|
 | Implementar (autônomo) | 02/09 – 09/09 | |
 | 🔴 Sessão Técnica 3: Implementação | 09/09/2026 | |
 | Escalar (autônomo) | 09/09 – 16/09 | |
