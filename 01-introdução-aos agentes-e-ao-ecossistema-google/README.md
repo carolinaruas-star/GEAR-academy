@@ -1,362 +1,133 @@
-# 🤖 GEAR: Introdução aos Agentes e ao Ecossistema de Agentes do Google
+# 🤖 Curso 1: Introdução aos Agentes e ao Ecossistema de Agentes do Google
 
-Este repositório reúne meus estudos e anotações do curso **GEAR — Introdução aos Agentes e ao Ecossistema de Agentes do Google**, com foco nos fundamentos de **Agentes de IA**, sua arquitetura, aplicações e no ecossistema de ferramentas do Google para desenvolvimento de soluções agênticas.
+[![Google Cloud - Agent Fundamentals](https://img.shields.io/badge/Google%20Cloud-Agent%20Fundamentals-4285F4?logo=googlecloud&logoColor=white)](./01-fundamentos-de-agentes/06-badge-conclusao.md)[![Google Cloud - Enterprise Agents](https://img.shields.io/badge/Enterprise%20Agents-34A853?logo=googlecloud&logoColor=white)](./02-agentes-empresariais/05-badge-conclusao.md)
 
-O curso apresenta a evolução dos **LLMs para sistemas capazes de raciocinar, planejar, utilizar ferramentas e executar ações de forma autônoma**.
+Este repositório reúne meus estudos e anotações do programa **GEAR — Gemini Enterprise Agent Platform**, cobrindo desde os conceitos fundamentais de **Agentes de IA** até a sua aplicação prática no ambiente corporativo utilizando o ecossistema do **Google Cloud**.
 
----
-
-## 🎯 Objetivo do curso
-
-Compreender os fundamentos dos Agentes de IA e desenvolver uma visão prática sobre **quando, por que e como utilizar agentes** na construção de soluções inteligentes.
-
-Ao longo do curso, são explorados:
-
-* 🧠 Conceitos fundamentais de Agentes de IA
-* 🔄 Ciclos de raciocínio e tomada de decisão
-* 🧩 Abstração de agentes
-* 🛠️ Uso de ferramentas e integração com sistemas externos
-* 🔗 Modelo, ferramentas e orquestração
-* 🤝 Sistemas multiagentes
-* 🎯 Seleção de casos de uso
-* ☁️ Ecossistema de agentes do Google
-* 🔐 Governança e segurança
-* 📊 Avaliação e observabilidade
-* 🚀 Arquitetura de soluções agênticas
+O conteúdo acompanha a evolução tecnológica dos modelos de linguagem: **da geração passiva de texto (LLM) para a execução autônoma de tarefas orientadas a objetivos (Agentes)**.
 
 ---
 
-## 📚 Conteúdo do curso
+## 🎯 Objetivos de Aprendizado
 
-### 01 — Introdução a Agentes
-
-Fundamentos sobre o que são Agentes de IA, suas principais capacidades e como eles diferem de chatbots tradicionais.
-
-**Principais conceitos:**
-
-* Operação autônoma
-* Raciocínio e planejamento
-* Consciência do ambiente
-* Aprendizado contínuo
-* Uso de ferramentas
-* Memória e contexto
-* Sistemas multiagentes
-* Agente simples
-* Subagentes
-* Orquestradores
-* Aplicações práticas
-
-📁 [`01-introducao-a-agentes/`](./01-introducao-a-agentes/)
+- 🧠 **Fundamentos Agênticos:** Entender a arquitetura `Modelo + Ferramentas + Orquestração` e o ciclo contínuo `Observar → Interpretar → Planejar → Agir → Verificar`.
+- 🏢 **Casos de Uso Empresariais:** Conectar o desenvolvimento de agentes a KPIs de negócio (produtividade, custo, qualidade e velocidade) nas 6 grandes categorias corporativas.
+- ⚙️ **Matriz de Decisão:** Saber diferir quando usar automações tradicionais/APIs (*determinísticas*), chamadas de função (*assistidas*) ou agentes autônomos (*dinâmicos/complexos*).
+- ☁️ **Ecossistema Google Cloud:** Explorar as plataformas e ferramentas da Google (Gemini Enterprise, ADK, Conversational Agents, NotebookLM e Agent Runtime).
 
 ---
 
-### 02 — Abstração de Agentes
+## 📚 Módulos do Curso
 
-Explora a evolução dos sistemas baseados em LLMs e a transição de modelos que apenas **geram respostas** para sistemas capazes de **executar tarefas**.
+### 📁 Módulo 1 — Fundamentos de Agentes de IA
+Apresenta a base teórica e conceitual dos agentes, sua arquitetura central e critérios de quando aplicar ou evitar essa tecnologia.
 
-**Evolução:**
+| Seção | Tópico Principal | Link |
+| :--- | :--- | :---: |
+| **01 — Introdução a Agentes** | O que são agentes, capacidades e sistemas multiagentes. | [Acessar](./01-fundamentos-de-agentes/01-introducao-a-agentes.md) |
+| **02 — Abstração de Agentes** | Evolução: `LLM` ➔ `Function Calling` ➔ `Agente Autônomo`. | [Acessar](./01-fundamentos-de-agentes/02-abstracao-de-agentes.md) |
+| **03 — Como Agentes Funcionam** | Detalhamento dos 3 pilares: **Modelo, Ferramentas e Orquestração**. | [Acessar](./01-fundamentos-de-agentes/03-como-os-agentes-funcionam.md) |
+| **04 — Agentes em Ação** | Quando usar ou não usar agentes e introdução ao Google Cloud. | [Acessar](./01-fundamentos-de-agentes/04-agentes-em-acao.md) |
+| **05 — Conclusão** | Modelos mentais essenciais para arquitetura de software agêntico. | [Acessar](./01-fundamentos-de-agentes/05-conclusao.md) |
+| **06 — Badge / Certificado** | Conquista do selo *Google Cloud — Agent Fundamentals*. | [Acessar](./01-fundamentos-de-agentes/06-badge-conclusao.md) |
 
+---
+
+### 📁 Módulo 2 — Agentes Empresariais e Ecossistema Google
+Aprofunda na aplicação de agentes para problemas corporativos e no uso da infraestrutura gerenciada do Google Cloud.
+
+| Seção | Tópico Principal | Link |
+| :--- | :--- | :---: |
+| **01 — Casos de Uso Corporativos** | As 6 categorias de agentes de negócios e alinhamento a KPIs. | [Acessar](./02-agentes-empresariais/01-casos-de-uso-corporativo.md) |
+| **02 — Desenvolvimento no GCP** | Abordagens *No-Code*, *Low-Code* e *Code-First* (ADK e Agent Platform). | [Acessar](./02-agentes-empresariais/02-desenvolvimento-com-google-cloud.md) |
+| **03 — Gemini Enterprise** | O Hub inteligente que unifica pessoas, agentes, dados e sistemas. | [Acessar](./02-agentes-empresariais/03-gemini-enterprise.md) |
+| **04 — Simulação Prática** | Prática com busca avançada, Deep Research, NotebookLM e Studio. | [Acessar](./02-agentes-empresariais/04-simulacao-pratica.md) |
+| **05 — Badge / Certificado** | Conquista do selo *Google Cloud — Enterprise Agents and Use Cases*. | [Acessar](./02-agentes-empresariais/05-badge-conclusao.md) |
+
+---
+
+## 🧠 Modelos Mentais e Sínteses
+
+### 1. Evolução da Capacidade e Autonomia
 ```text
-LLM
- ↓
-LLM + chamadas de função
- ↓
-Agente
+  LLM                ➔ Responde com base no conhecimento (Consultor)
+  LLM + Funções      ➔ Executa ações pontuais quando ordenado (Assistente)
+  Agente Autônomo    ➔ Recebe um objetivo e decide como alcançá-lo (Executor)
+
 ```
 
-**Principais conceitos:**
-
-* APIs de LLM
-* Function Calling
-* Ferramentas
-* Autonomia
-* Planejamento
-* Contexto
-* Adaptação
-* Fluxos de trabalho complexos
-* Diferença entre LLM + ferramentas e agentes
-
-📁 [`02-abstracao-de-agentes/`](./02-abstracao-de-agentes/)
-
----
-
-### 03 — Como os Agentes Funcionam
-
-Apresenta a arquitetura fundamental de um agente e a relação entre seus principais componentes.
-
-> **Agente = Modelo + Ferramentas + Orquestração**
-
-**Principais componentes:**
-
-| Componente          | Função                                                     |
-| ------------------- | ---------------------------------------------------------- |
-| 🧠 **Modelo**       | Interpreta objetivos, raciocina e toma decisões            |
-| 🛠️ **Ferramentas** | Permitem interagir com sistemas e dados externos           |
-| 🔄 **Orquestração** | Coordena o ciclo de percepção, decisão, ação e verificação |
-
-Também são apresentados conceitos relacionados a:
-
-* ReAct
-* Raciocínio e ação
-* Árvores de pensamento
-* Encadeamento de ferramentas
-* Feedback
-* Verificação de resultados
-
-📁 [`03-como-os-agentes-funcionam/`](./03-como-os-agentes-funcionam/)
-
----
-
-### 04 — Agentes em Ação
-
-Aborda a aplicação prática de agentes e, principalmente, **quando utilizar ou não utilizar essa arquitetura**.
-
-Agentes são indicados especialmente para problemas:
-
-* Complexos
-* Dinâmicos
-* De múltiplas etapas
-* Que exigem raciocínio
-* Que precisam interagir com sistemas externos
-* Que exigem adaptação durante a execução
-
-Também são analisados casos em que soluções mais simples são melhores, como:
-
-* APIs simples
-* Scripts
-* FAQs
-* Funções
-* Automações determinísticas
-* Processamentos repetitivos
-
-📁 [`04-agentes-em-acao/`](./04-agentes-em-acao/)
-
----
-
-### 05 — Conclusão
-
-Consolidação dos principais conceitos estudados e dos modelos mentais necessários para projetar sistemas agênticos.
-
-Uma das principais sínteses do curso é:
+### 2. O Ciclo Agêntico Fundamental
 
 ```text
-LLM
-→ conhecimento e recomendações
+┌───────────┐     ┌────────────┐     ┌───────────┐     ┌───────────┐     ┌───────────┐
+│  Observar │ ──> │ Interpretar│ ──> │  Planejar │ ──> │   Agir    │ ──> │ Verificar │
+└───────────┘     └────────────┘     └───────────┘     └───────────┘     └─────┬─────┘
+      ▲                                                                        │
+      └────────────────────────── (Próximo Ciclo) ─────────────────────────────┘
 
-LLM + funções
-→ conhecimento + ferramentas
-
-Agente
-→ objetivo + raciocínio + ferramentas + autonomia
 ```
 
-A conclusão reforça que **nem todo problema precisa de um agente**.
-
-A escolha da arquitetura deve considerar o nível de autonomia necessário, além de fatores como custo, latência, complexidade e previsibilidade.
-
-📁 [`05-conclusao/`](./05-conclusao/)
-
----
-
-## ☁️ Ecossistema de Agentes do Google
-
-O curso também introduz o ecossistema do Google voltado à construção, execução, governança e otimização de agentes.
-
-De forma geral, os recursos são organizados em quatro grandes pilares:
-
-### 🏗️ Criação
-
-Ferramentas e recursos para construir agentes e conectá-los a modelos, dados e ferramentas.
-
-* ADK
-* Agent Studio
-* Agent Garden
-* Model Garden
-* RAG
-
-### 🚀 Escala
-
-Recursos para executar agentes de maneira escalável e manter contexto durante suas interações.
-
-* Agent Runtime
-* Sessões
-* Memória persistente
-* Execução de código
-
-### 🔐 Governança
-
-Recursos voltados ao controle e à segurança de agentes em ambientes corporativos.
-
-* Registro
-* Identidade
-* Gateways
-* Políticas de segurança
-* Detecção de vulnerabilidades
-
-### 📊 Otimização
-
-Recursos para avaliar, monitorar e melhorar continuamente o comportamento dos agentes.
-
-* Avaliação
-* Simulação
-* Observabilidade
-* Otimização de prompts
-
----
-
-## 🧠 Principais aprendizados
-
-Ao final do curso, os principais modelos mentais desenvolvidos são:
-
-### 1. LLM ≠ Agente
-
-Um LLM pode gerar respostas, enquanto um agente utiliza o modelo para **alcançar objetivos por meio de ações**.
-
-### 2. Ferramentas ampliam as capacidades
-
-APIs, bancos de dados, sistemas externos e funções permitem que o agente interaja com o ambiente.
-
-### 3. Orquestração é fundamental
-
-O diferencial de um agente não está apenas no modelo ou nas ferramentas, mas na capacidade de **coordenar decisões e ações de forma dinâmica**.
-
-### 4. Autonomia tem um custo
-
-Quanto maior a autonomia, maior pode ser a complexidade, latência e necessidade de controle.
-
-### 5. Nem tudo precisa de um agente
-
-A melhor arquitetura é aquela que resolve o problema com o **menor nível de complexidade necessário**.
-
----
-
-## 🔄 Modelo mental
-
-Uma forma simples de visualizar a evolução apresentada no curso:
+### 3. As 4 Camadas da Gemini Enterprise Agent Platform
 
 ```text
-                 COMPLEXIDADE / AUTONOMIA
-                         ↑
-                         │
-                    🤖 AGENTE
-                         │
-               LLM + FUNCTION CALLING
-                         │
-                       🧠 LLM
-                         │
-                  Regras / APIs
-                         │
-                         └──────────────→
-                              CAPACIDADE
-```
+  CRIAR       ➔ ADK, Agent Studio, Agent Garden, Model Garden, RAG
+  ESCALAR     ➔ Agent Runtime, Sessões, Memória Persistente, Execução de Código
+  GOVERNAR    ➔ Registros, Identidade, Gateways, Políticas de Segurança
+  OTIMIZAR    ➔ Avaliação, Simulação, Observabilidade, Otimização de Prompts
 
-E o ciclo fundamental de um agente pode ser representado como:
-
-```text
-┌───────────┐
-│  Observar │
-└─────┬─────┘
-      ↓
-┌────────────┐
-│ Interpretar│
-└─────┬──────┘
-      ↓
-┌───────────┐
-│ Planejar  │
-└─────┬─────┘
-      ↓
-┌───────────┐
-│   Agir    │
-└─────┬─────┘
-      ↓
-   Verificar
-      │
-      └──────→ próximo ciclo
 ```
 
 ---
 
-## 🗂️ Estrutura do repositório
+## 🗂️ Estrutura do Repositório
 
 ```text
 GEAR-academy/
-│
 ├── README.md
 │
-├── 01-introducao-a-agentes/
-│   └── README.md
+├── 01-fundamentos-de-agentes/
+│   ├── 01-introducao-a-agentes.md
+│   ├── 02-abstracao-de-agentes.md
+│   ├── 03-como-os-agentes-funcionam.md
+│   ├── 04-agentes-em-acao.md
+│   ├── 05-conclusao.md
+│   └── 06-badge-conclusao.md
 │
-├── 02-abstracao-de-agentes/
-│   └── README.md
-│
-├── 03-como-os-agentes-funcionam/
-│   └── README.md
-│
-├── 04-agentes-em-acao/
-│   └── README.md
-│
-├── 05-conclusao/
-│   └── README.md
-│
-├── 06-badge.md
+└── 02-agentes-empresariais/
+    ├── 01-casos-de-uso-corporativo.md
+    ├── 02-desenvolvimento-com-google-cloud.md
+    ├── 03-gemini-enterprise.md
+    ├── 04-simulacao-pratica.md
+    └── 05-badge-conclusao.md
+
 ```
 
 ---
 
-## 🛠️ Tecnologias e conceitos
+## 🛠️ Tecnologias e Conceitos Explorados
 
-Ao longo dos estudos, são abordados conceitos relacionados a:
-
-**Inteligência Artificial Generativa**
-**LLMs**
-**Gemini**
-**Agentes de IA**
-**Function Calling**
-**RAG**
-**Multiagentes**
-**Orquestração**
-**Google Cloud**
-**Vertex AI**
-**Agent Development Kit (ADK)**
-**Agent Runtime**
-**Observabilidade**
-**Governança de IA**
+* **IA Generativa & LLMs:** Gemini API, Vertex AI, Prompt Engineering.
+* **Arquitetura de Agentes:** Function Calling, ReAct, RAG, Memória Persistente, Sistemas Multiagentes.
+* **Plataformas e Ferramentas Google:** Gemini Enterprise, Agent Development Kit (ADK), Agent Runtime, NotebookLM, Conversational Agents.
+* **Engenharia de Software & Cloud:** APIs REST, Cloud Storage, Observabilidade, Governança e Métricas (KPIs).
 
 ---
 
-## 🚀 Próximos passos
+## 💡 Ideia Central
 
-O conhecimento apresentado neste curso serve como base para avançar para a **implementação prática de agentes**.
-
-Os próximos estudos podem envolver:
-
-* Construção de agentes com ADK
-* Integração com ferramentas
-* Uso de modelos Gemini
-* RAG e bases de conhecimento
-* Memória e contexto
-* Sistemas multiagentes
-* Deploy de agentes
-* Avaliação e observabilidade
-* Segurança e governança
+> **Entender agentes é o primeiro passo. Saber quando e como utilizá-los é o que transforma conhecimento em engenharia.** 🚀
 
 ---
 
-## 💡 Ideia central
-
-> **Entender agentes é o primeiro passo. Saber quando e como utilizá-los é o que transforma conhecimento em engenharia.**
-
-Este repositório documenta essa jornada — **do conceito à construção de sistemas agênticos reais.** 🚀
-
----
+<div align="center">
 
 ## 👩‍💻 Autora
 
-**Ana Carolina Pereira Ruas**
-
-Engenheira Florestal
-Foco em **Dados, Machine Learning, IA Generativa, LLMs, Agentes de IA e Cloud**
+**Ana Carolina Pereira Ruas**  
+Engenheira Florestal  
+**Foco em Dados, Machine Learning, IA Generativa, LLMs, Agentes e Cloud**  
 
 ---
+⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
 
-⭐ Repositório desenvolvido como parte dos estudos da **GEAR — Gemini Enterprise Agent Platform**.
+</div>
