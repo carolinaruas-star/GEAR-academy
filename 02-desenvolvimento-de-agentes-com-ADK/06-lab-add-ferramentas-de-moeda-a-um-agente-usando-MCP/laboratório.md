@@ -6,19 +6,19 @@
 
 ## 🎯 Objetivo do Laboratório
 
-Modificar um agente de conversão financeira desenvolvido com o **Google Agent Development Kit (ADK)** para integrar novas ferramentas externas através do **Model Context Protocol (MCP)**[cite: 58]. 
+Modificar um agente de conversão financeira desenvolvido com o **Google Agent Development Kit (ADK)** para integrar novas ferramentas externas através do **Model Context Protocol (MCP)**. 
 
-A prática demonstra como estender as capacidades de um agente que lidava apenas com moedas fiduciárias, habilitando consultas em tempo real ao preço de criptomoedas via integração com API externa no servidor MCP[cite: 58].
+A prática demonstra como estender as capacidades de um agente que lidava apenas com moedas fiduciárias, habilitando consultas em tempo real ao preço de criptomoedas via integração com API externa no servidor MCP.
 
 ---
 
 ## 🛠️ Tecnologias e Conceitos Aplicados
 
-- 🤖 **Google Agent Development Kit (ADK):** Framework para orquestração e execução do agente raiz[cite: 58].
+- 🤖 **Google Agent Development Kit (ADK):** Framework para orquestração e execução do agente raiz.
 - 🔌 **Model Context Protocol (MCP):** Protocolo padronizado para conexão entre o agente e ferramentas externas[cite: 58].
-- 🔗 **A2A (Agent2Agent):** Protocolo de comunicação e delegação entre agentes do ADK[cite: 58].
-- ⚡ **FastMCP & uv:** Gerenciamento de ambiente Python de alta performance para execução do servidor MCP[cite: 58].
-- 🌐 **Coinbase Spot Price API:** Endpoint público de dados financeiros em tempo real[cite: 58].
+- 🔗 **A2A (Agent2Agent):** Protocolo de comunicação e delegação entre agentes do ADK.
+- ⚡ **FastMCP & uv:** Gerenciamento de ambiente Python de alta performance para execução do servidor MCP.
+- 🌐 **Coinbase Spot Price API:** Endpoint público de dados financeiros em tempo real.
 
 ---
 
