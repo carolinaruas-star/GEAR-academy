@@ -117,6 +117,7 @@ Ao concluir este curso, foram desenvolvidos conhecimentos sobre o ciclo completo
 
 ## 📂 Estrutura
 
+```
 GEAR-academy/
 │
 ├── 01-introdução-aos agentes-e-ao-ecossistema-google/
@@ -131,6 +132,7 @@ GEAR-academy/
 │   ├── 04-implantar-agentes-prontos/
 │   └── README.md
 └── README.md
+
 ```
 
 > 📚 **GEAR Academy** — Estudos sobre desenvolvimento, arquitetura e implantação de agentes de IA com tecnologias do Google Cloud.
