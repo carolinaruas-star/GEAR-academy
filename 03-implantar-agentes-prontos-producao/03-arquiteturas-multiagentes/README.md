@@ -29,11 +29,11 @@ Ao longo do módulo, exploramos a orquestração através de árvores hierárqui
 
 | Seção | Descrição / Foco Principal | Arquivos |
 | :--- | :--- | :---: |
-| **01 — Sistemas Multiagentes com ADK** | Hierarquias de agentes, `Session State` com `ToolContext` e agentes de fluxo (`Sequential`, `Loop`, `Parallel`)[cite: 30]. | [Acessar](./01-sistemas-multiagentes-com-adk_2.md) |
-| **02 — Conexão de Agentes Remotos (A2A)** | Comunicação distribuída entre agentes via protocolo Agent2Agent, *Agent Cards* (`agent.json`) e `RemoteA2aAgent`[cite: 31]. | [Acessar](./02-conexao-agentes-remotos.md) |
-| **03 — Ferramentas MCP com ADK** | *(Laboratório em Manutenção)* Integração de clientes e servidores Model Context Protocol[cite: 33, 34]. | *(Em Manutenção)* |
-| **04 — Desafio de Implantação Multiagente** | Challenge Lab: depuração, resolução de conflitos de ferramentas com `AgentTool`, RAG e deploy no Agent Engine[cite: 32]. | [Acessar](./04-desafio-implantacao-multiagente.md) |
-| **05 — Badge de Conclusão** | Registro da conquista da credencial oficial *Deploy Multi-Agent Architectures*[cite: 33]. | [Acessar](./05-badge-conclusao.md) |
+| **01 — Sistemas Multiagentes com ADK** | Hierarquias de agentes, `Session State` com `ToolContext` e agentes de fluxo (`Sequential`, `Loop`, `Parallel`). | [Acessar](./01-sistemas-multiagentes-com-adk_2.md) |
+| **02 — Conexão de Agentes Remotos (A2A)** | Comunicação distribuída entre agentes via protocolo Agent2Agent, *Agent Cards* (`agent.json`) e `RemoteA2aAgent`. | [Acessar](./02-conexao-agentes-remotos.md) |
+| **03 — Ferramentas MCP com ADK** | *(Laboratório em Manutenção)* Integração de clientes e servidores Model Context Protocol. | *(Em Manutenção)* |
+| **04 — Desafio de Implantação Multiagente** | Challenge Lab: depuração, resolução de conflitos de ferramentas com `AgentTool`, RAG e deploy no Agent Engine. | [Acessar](./04-desafio-implantacao-multiagente.md) |
+| **05 — Badge de Conclusão** | Registro da conquista da credencial oficial *Deploy Multi-Agent Architectures*. | [Acessar](./05-badge-conclusao.md) |
 
 ---
 
