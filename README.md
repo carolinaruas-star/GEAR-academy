@@ -29,47 +29,34 @@ A plataforma técnica por trás do programa é o **Gemini Enterprise Agent Platf
 | Escalar (autônomo) | 09/09 – 16/09 |Concluído ☑️|
 | Finalização do curso | 17/09 – 21/09 |Concluído ☑️|
 
-
 ## 🗂️ Estrutura do repositório
 
-Os resumos estão organizados por módulo e capítulo:
+Os resumos estão organizados por cursos, módulos e submódulos:
 
 ```
-📁 01-introdução-aos-agentes-e-ao-ecossistema-google/
-├── 📁 01-nocoes-basicas-de-agentes/
-│   ├── 📁 01-introducao-a-agentes/
-│   │   └── 📄 resumo-01.md
-│   ├── 📁 02-abstracao-de-agentes/
-│   │   └── 📄 resumo-02.md
-│   ├── 📁 03-como-os-agentes-funcionam/
-│   │   └── 📄 resumo-03.md
-│   ├── 📁 04-agentes-em-acao/
-│   │   └── 📄 resumo-04.md
-│   ├── 📁 05-conclusao/
-│   │   └── 📄 resumo-05.md
-│   ├── 📄 06-badge-conclusao
-│   └── 📄 README
-├── 📁 02-agentes-empresariais/
-│   ├── 📁 01-casos-de-uso-corporativo/
-│   │   └── 📄 resumo-01.md
-│   ├── 📁 02-desenvolvimento-com-google-cloud/
-│   │   └── 📄 resumo-02.md
-│   ├── 📁 03-gemini-enterprise/
-│   │   └── 📄 resumo-03.md
-│   ├── 📁 04-simulacao-pratica/
-│   │   └── 📄 resumo-04.md
-│   ├── 📄 05-badge-conclusao
-│   └── 📄 README
-└── 📄 README
-📁 02-desenvolvimento-de-agentes-com-ADK/
-└── ...
+📁 GEAR-academy/
+├── 📁 01-introdução-aos-agentes-e-ao-ecossistema-google/
+│   ├── 📁 01-nocoes-basicas-de-agentes/
+│   └── 📁 02-agentes-empresariais/
+├── 📁 02-desenvolvimento-de-agentes-com-ADK/
+│   ├── 📁 01-primeiros-passos-na-criacao-de-agentes-com-ADK/
+│   ├── 📁 02-engenharia-de-agentes-de-IA-com-ADK/
+│   ├── 📁 03-otimizacao-do-comportamento-de-agentes/
+│   ├── 📁 04-gerenciamento-de-memoria-e-estado-de-agentes/
+│   ├── 📁 05-inclusao-de-habilidades-agenticas-com-ferramentas/
+│   ├── 📁 06-lab-add-ferramentas-de-moeda-a-um-agente-usando-MCP/
+│   └── 📁 07-conclusao-desenvolver-agentes-com-ADK/
+├── 📁 03-implantar-agentes-prontos-producao/
+│   ├── 📁 01-criacao-e-implantacao/
+│   ├── 📁 02-primeiro-agente/
+│   └── 📁 03-arquiteturas-multiagentes/
+└── 📁 04-escalonar-agentes-para-empresa/
+│    ├── 📁 01-agentes-de-IA-generativa/
+│    ├── 📁 02-IA-centrada-em-pessoas/
+└──  └── 📁 03-orquestre-fluxos-de-trabalho/
+   
 ```
-
-Cada módulo corresponde a um dos pilares da Academia, e cada capítulo contém o resumo do conteúdo estudado.
-
----
-
-> Repositório em construção — atualizado conforme avanço nas semanas da Academia GEAR.
+Cada curso corresponde a um dos pilares da Academia, e cada módulo contém os resumos dos conteúdos estudados.
 
 ---
 
@@ -81,5 +68,4 @@ Engenheira Florestal
 Foco em **Dados, Machine Learning, IA Generativa, LLMs, Agentes de IA e Cloud**
 
 ---
-
 ⭐ Repositório desenvolvido como parte dos estudos da **GEAR — Gemini Enterprise Agent Platform**.
