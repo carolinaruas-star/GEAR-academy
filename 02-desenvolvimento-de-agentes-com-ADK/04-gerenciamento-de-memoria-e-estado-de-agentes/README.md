@@ -95,5 +95,4 @@ Engenheira Florestal
 
 ---
 ⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
-
 </div>
