@@ -2,6 +2,11 @@
 
 [![Google Cloud - Agent Fundamentals](https://img.shields.io/badge/Google%20Cloud-Agent%20Fundamentals-4285F4?logo=googlecloud&logoColor=white)](./01-fundamentos-de-agentes/06-badge-conclusao.md)[![Google Cloud - Enterprise Agents](https://img.shields.io/badge/Enterprise%20Agents-34A853?logo=googlecloud&logoColor=white)](./02-agentes-empresariais/05-badge-conclusao.md)
 
+---
+*Guia completo dos princípios fundamentais de agentes de IA, ecossistema do Google ADK e construção de primeiros assistentes inteligentes.*
+
+---
+
 Este repositório reúne meus estudos e anotações do programa **GEAR — Gemini Enterprise Agent Platform**, cobrindo desde os conceitos fundamentais de **Agentes de IA** até a sua aplicação prática no ambiente corporativo utilizando o ecossistema do **Google Cloud**.
 
 O conteúdo acompanha a evolução tecnológica dos modelos de linguagem: **da geração passiva de texto (LLM) para a execução autônoma de tarefas orientadas a objetivos (Agentes)**.
