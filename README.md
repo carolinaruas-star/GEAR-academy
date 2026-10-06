@@ -60,12 +60,15 @@ Cada curso corresponde a um dos pilares da Academia, e cada módulo contém os r
 
 ---
 
+<div align="center">
+
 ## 👩‍💻 Autora
 
-**Ana Carolina Pereira Ruas**
-
-Engenheira Florestal
-Foco em **Dados, Machine Learning, IA Generativa, LLMs, Agentes de IA e Cloud**
+**Ana Carolina Pereira Ruas**  
+Engenheira Florestal  
+**Foco em Dados, Machine Learning, IA Generativa, LLMs, Agentes e Cloud**  
 
 ---
-⭐ Repositório desenvolvido como parte dos estudos da **GEAR — Gemini Enterprise Agent Platform**.
+⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
+
+</div>
