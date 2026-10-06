@@ -117,6 +117,7 @@ Ao concluir este curso, foram desenvolvidos conhecimentos sobre o ciclo completo
 
 ## 📂 Estrutura
 
+```
 GEAR-academy/
 │
 ├── 01-introdução-aos agentes-e-ao-ecossistema-google/
