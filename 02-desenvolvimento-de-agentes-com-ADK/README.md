@@ -1,121 +1,110 @@
-# 🤖 Módulo 2: Engenharia de Agentes de IA com ADK
+# 🤖 Curso 2: Desenvolvimento de Agentes com o Kit de Desenvolvimento de Agente (ADK)
 
-Repositório dedicado aos estudos e práticas do curso **Engenharia de agentes de IA com o Kit de Desenvolvimento de Agente (ADK)**, realizado na plataforma **Google Skills / Qwiklabs**.
+[![Google Cloud - ADK Agent Development](https://img.shields.io/badge/Google%20Cloud-ADK%20Agent%20Development-4285F4?logo=googlecloud&logoColor=white)](https://www.skills.google/)
 
-O curso aborda conceitos e práticas relacionados à construção, configuração, correção e implantação de agentes de Inteligência Artificial utilizando o **Agent Development Kit (ADK)**.
 
----
-
-## 📚 Curso
-
-### 🤖 Engenharia de agentes de IA com ADK
-
-| Informação        | Detalhes                                                                 |
-| ----------------- | ------------------------------------------------------------------------ |
-| 🎓 **Curso**      | Engenharia de agentes de IA com o Kit de Desenvolvimento de Agente (ADK) |
-| 🏫 **Plataforma** | Google Skills / Qwiklabs                                                 |
-| 📊 **Nível**      | Intermediário                                                            |
-| ⏱️ **Duração**    | 1h45min                                                                  |
-| 🤖 **Tecnologia** | Agent Development Kit (ADK)                                              |
-| 🏆 **Resultado**  | Selo de habilidade                                                       |
-
-### 🎯 Objetivo
-
-Desenvolver habilidades práticas relacionadas à **engenharia de agentes de IA**, trabalhando com a configuração, correção e implantação de agentes capazes de verificar informações e executar tarefas específicas.
-
-O curso utiliza um cenário prático baseado na **Cymbal Travel**, uma agência de viagens que precisa garantir a qualidade das informações presentes em seus materiais promocionais.
+*Guia completo de arquitetura, desenvolvimento, gerenciamento de estado, integração de ferramentas (MCP) e orquestração agêntica corporativa com o Google ADK.*
 
 ---
 
-## 🧪 Conteúdo Prático
+## 🎯 Sobre o Curso
 
-O material deste curso está organizado em:
+O curso **"Desenvolvimento de Agentes com o Kit de Desenvolvimento de Agente (ADK)"** aborda a transição prática e arquitetural de modelos de linguagem isolados (*LLMs puros*) para **sistemas agênticos autônomos, determinísticos, extensíveis e prontos para produção**.
 
-### 1. 🧪 Laboratório com desafio
+Utilizando o **Google Agent Development Kit (ADK)** em Python, este repositório consolida todo o ciclo de vida de um agente: desde a criação de projetos via CLI e refinamento de instruções, até o gerenciamento avançado de **memória/estado de sessão** e a extensão de capacidades usando **ferramentas nativas, servidores MCP (*Model Context Protocol*) e `FunctionTools` personalizadas**.
 
-No laboratório, o objetivo é atuar como desenvolvedor da **Cymbal Travel**, configurando, corrigindo e implantando agentes para:
+Toda a jornada está ancorada na equação fundamental do ADK:
 
-* 🔎 Verificar informações de viagens;
-* 📋 Auditar declarações de marketing;
-* 🤖 Aplicar o Agent Development Kit (ADK);
-* 🛠️ Corrigir problemas na configuração dos agentes;
-* 🚀 Implantar os agentes desenvolvidos.
-
-📄 **Material:** [`01-laboratório-com-desafio.md`](./02-engenharia-de-agentes-de-IA-com-ADK/01-laboratório-com-desafio.md)
+$$\text{Agente} = \text{Modelo} + \text{Ferramentas} + \text{Orquestração}$$
 
 ---
 
-### 2. 🏆 Badge de Conclusão
+## 🚀 Módulos do Curso
 
-Registro do **Selo de Habilidade** obtido após a conclusão do curso e do laboratório com desafio.
-
-📄 **Material:** [`02-badge-conclusao.md`](./02-engenharia-de-agentes-de-IA-com-ADK/02-badge-conclusao.md)
+| Módulo | Título | Descrição / Foco Principal | Status |
+| :---: | :--- | :--- | :---: |
+| **01** | **Fundamentos do ADK** | Primeiros passos na criação de agentes de IA, estrutura do SDK, CLI (`adk create`, `adk web`) e inicialização de sessões interativas com `LlmAgent`. | ✅ Concluído |
+| **02** | **Laboratório: Engenharia de Agentes** | Prática *hands-on* de configuração, solução de problemas de sintaxe e ambiente, e implantação de agentes no ecossistema local e em nuvem. | ✅ Concluído |
+| **03** | **Otimização do Comportamento** | Engenharia de prompts para agentes, refinamento de instruções, controle de tom, papéis, restrições e técnicas de raciocínio lógico. | ✅ Concluído |
+| **04** | **Gerenciamento de Memória e Estado** | Persistência contextual via `session.state`, injeção dinâmica de variáveis (`{var}`), captura de saídas (`output_key`) e escopos/namespaces (`temp:`, sessão, `user:`, `app:`). | ✅ Concluído |
+| **05** | **Habilidades Agênticas com Ferramentas** | Extensão de capacidades com grounding na web (`google_search`), matemática precisa (`BuiltInCodeExecutor`), ferramentas de função e **Model Context Protocol (MCP)**. | ✅ Concluído |
+| **06** | **Laboratório: Ferramentas de Moeda via MCP** | Prática de integração de um servidor MCP em Python/FastMCP para consultar cotações de criptomoedas em tempo real via API pública da Coinbase. | ✅ Concluído |
+| **07** | **Conclusão Geral do Curso** | Síntese e consolidação de toda a arquitetura de orquestração agêntica para cenários corporativos reais na Google Cloud. | ✅ Concluído |
 
 ---
 
-## 📁 Estrutura do Repositório
+## 📐 Arquitetura e Conceitos-Chave
+
+### 🧠 1. Modelo vs. Ferramenta vs. Orquestração
+- **Modelo (LLM):** Atua como o motor de raciocínio, responsável por interpretar intenções, analisar contextos e tomar decisões sobre qual ação tomar.
+- **Ferramentas (Tools):** Executam ações determinísticas no mundo real (consultas a bancos de dados, chamadas de API, execução de código Python e pesquisas na web).
+- **Orquestração:** O runtime do ADK gerencia o loop de raciocínio-ação-observação, mantendo o controle da sessão e encadeando múltiplos agentes ou ferramentas.
+
+### 💾 2. Histórico da Conversa vs. Estado da Sessão (`session.state`)
+- **Histórico:** Fornece contexto textual corrido para a janela de contexto do LLM.
+- **Session State:** Funciona como um dicionário de dados estruturado acessível e manipulável via código Python e injeção de variáveis (`{var}`).
 
 ```text
-📦 GEAR-academy/
-│
-├── 📁 01-introdução-aos-agentes-e-ao-ecossistema-google/
-│
-├── 📁 02-desenvolvimento-de-agentes-com-ADK/
-│   ├── 📁 01-primeiros-passos-na-criação-de-agentes-com-ADK/
-│   ├── 📁 02-engenharia-de-agentes-de-IA-com-ADK/
-│   ├── 📁 03-otimização-do-comportamento-de-agentes/
-│   ├── 📁 04-gerenciamento-de-memória-e-estado-de-agentes/
-│   ├── 📁 05-inclusão-de-habilidades-agênticas-com-ferramentas/
-│   ├── 📁 06-lab-add-ferramentas-de-moeda-a-um-agente-usando-MCP/
-│   ├── 📁 07-conclusão-developer-agentes-com-ADK/
-│   ├── 📄 08-badge-conclusao.md
-│   └── 📄 README.md
-│
-├── 📁 03-implantar-agentes-prontos-producao/
-│
-├── 📓 exemplo.ipynb
-│
-└── 📄 README.md
+💬 HISTÓRICO DA CONVERSA                  🧠 ESTADO DA SESSÃO
+ (Texto Livre / Contexto)                 (Dados Estruturados / Código)
+┌─────────────────────────┐              ┌─────────────────────────────┐
+│ Usuário: "Meu nome é    │              │ session.state = {           │
+│           Alex"         │ ───────────> │   "user_name": "Alex",      │
+│ Agente:  "Prazer Alex!" │              │   "user_language": "pt-BR", │
+└─────────────────────────┘              │   "user:theme": "dark"      │
+                                         │ }                           │
+                                         └─────────────────────────────┘
 ```
 
-### 📂 Organização
+### 🔌 3. Ecossistema do Model Context Protocol (MCP)
+O **MCP** padroniza a comunicação entre o agente e servidores de ferramentas externos, eliminando a necessidade de código de integração proprietário:
 
-* **`02-engenharia-de-agentes-de-IA-com-ADK/`**
-  Contém os materiais relacionados ao curso.
-
-* **`01-laboratório-com-desafio.md`**
-  Documentação da atividade prática realizada durante o laboratório.
-
-* **`02-badge-conclusao.md`**
-  Registro do selo de habilidade conquistado após a conclusão.
-
-* **`README.md`**
-  Página principal do repositório e índice dos conteúdos.
+```text
+                                  🔌 PROTOCOLO MCP
+                                         │
+        ┌────────────────────────────────┼────────────────────────────────┐
+        ▼                                ▼                                ▼
+ 📁 Filesystem Server            🐙 GitHub Server                🗄️ Database Server
+ (Leitura e Escrita Local)       (Issues, PRs e Commits)         (PostgreSQL, Spanner, BigQuery)
+```
 
 ---
 
-## 🛠️ Tecnologias e Conceitos
+## 🛠️ Tecnologias Utilizadas
 
-* 🤖 Agent Development Kit (ADK)
-* 🧠 Agentes de Inteligência Artificial
-* ✨ Inteligência Artificial Generativa
-* 🔎 Verificação de informações
-* 📋 Auditoria de conteúdo
-* 🚀 Implantação de agentes
-* ☁️ Google Cloud
+- **Linguagem Principal:** Python 3.10+
+- **Framework de Agentes:** Google Agent Development Kit (ADK)
+- **Modelos de Linguagem:** Gemini 2.5 Flash / Gemini Enterprise
+- **Ambiente & Ferramentas:** CLI do ADK (`adk`), FastMCP, `uv`, `httpx`
+- **Nuvem & Infraestrutura:** Google Cloud Platform (GCP) / Google Cloud Skills Boost
 
 ---
 
-## 🔗 Links
+## 📂 Estrutura do Repositório
 
-* 📚 [Curso — Engenharia de agentes de IA com ADK](https://www.skills.google/paths/3545/course_sessions/42135802/documents/647533)
-* 🧪 [Laboratório com desafio](https://www.skills.google/paths/3545/course_sessions/42135802/labs/647534)
-* 🏆 [Selo de habilidade — Conclusão](https://www.skills.google/paths/3545/course_templates/1596/badge)
+```text
+desenvolvimento-de-agentes-com-adk/
+├── 01-primeiros-passos-na-criacao-de-agentes-com-o-adk/
+├── 02-laboratorio-engenharia-de-agentes-de-ia-com-o-adk/
+├── 03-otimizacao-do-comportamento-de-agentes/
+├── 04-gerenciamento-de-memoria-e-estado-de-agentes/
+├── 05-inclusao-de-habilidades-agenticas-com-ferramentas/
+├── 06-laboratorio-adicionar-ferramentas-de-moeda-a-um-agente-usando-o-mcp/
+├── 07-conclusao-do-curso/
+└── README.md
+```
 
 ---
 
-## 📌 Status
+<div align="center">
 
-**Curso:** ✅ Concluído
-**Laboratório:** ✅ Concluído
-**Badge:** 🏆 Conquistado
+## 👩‍💻 Autora
+
+**Ana Carolina Pereira Ruas**  
+Engenheira Florestal  
+**Foco em Dados, Machine Learning, IA Generativa, LLMs, Agentes e Cloud**  
+
+---
+⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
+
+</div>
