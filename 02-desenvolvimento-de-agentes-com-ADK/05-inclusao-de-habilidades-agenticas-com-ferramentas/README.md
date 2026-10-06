@@ -1,394 +1,72 @@
-# 🔧 Módulo 5: Inclusão de Habilidades Agênticas com Ferramentas
+# 🔧 Módulo 5 — Inclusão de Habilidades Agênticas com Ferramentas
 
-<p align="center">
-  <strong>Google Cloud Skills Boost • Google Agent Development Kit (ADK)</strong>
-</p>
+[![Google Cloud - Add Agent Capabilities with Tools](https://img.shields.io/badge/Google%20Cloud-Add%20Capabilities%20with%20Tools-4285F4?logo=googlecloud&logoColor=white)](./12-badge-conclusao.md)
 
-<p align="center">
-  <strong>Equipando agentes de IA com ferramentas para interagir com o mundo real.</strong>
-</p>
+Este módulo aborda como utilizar **ferramentas (tools)** para ampliar as capacidades dos agentes de IA no **Google Agent Development Kit (ADK)**, permitindo que eles superem as limitações dos dados congelados do LLM e possam **consultar dados em tempo real, realizar cálculos exatos, interagir com APIs e executar ações no mundo real**.
 
----
+Com o apoio do **Model Context Protocol (MCP)** e de **ferramentas de função personalizadas**, completamos a equação fundamental do ADK:
 
-## 📚 Sobre o módulo
-
-Este módulo apresenta como utilizar **ferramentas** para ampliar as capacidades dos agentes de IA, permitindo que eles ultrapassem as limitações de seus dados de treinamento e possam **consultar informações, executar tarefas, acessar sistemas externos e realizar ações específicas**.
-
-Um agente baseado apenas em um modelo de linguagem possui limitações importantes: seus conhecimentos podem estar desatualizados e ele não consegue, por conta própria, interagir diretamente com sistemas externos.
-
-A utilização de **tools** permite conectar os agentes a recursos capazes de executar operações específicas, tornando-os mais úteis, dinâmicos e capazes de participar de workflows reais.
-
-O módulo também apresenta o **Model Context Protocol (MCP)**, um padrão aberto que facilita a integração entre agentes, modelos de linguagem e ferramentas ou serviços externos.
+$$\text{Agente} = \text{Modelo} + \text{Ferramentas} + \text{Orquestração}$$
 
 ---
 
-## 🎯 Objetivos de aprendizagem
+## 🎯 Objetivos do Módulo
 
-Ao longo do módulo, os principais objetivos são:
-
-* 🛠️ Compreender como **ferramentas** ampliam as habilidades dos agentes;
-* 🔎 Utilizar ferramentas para acessar informações e executar tarefas;
-* 🧩 Conhecer ferramentas integradas para funcionalidades comuns;
-* 🔗 Compreender o **Model Context Protocol (MCP)**;
-* 🌐 Conectar agentes a ferramentas e serviços externos;
-* ⚙️ Criar e utilizar **ferramentas de função personalizadas**;
-* 🧠 Desenvolver instruções estratégicas para orientar o uso das ferramentas;
-* 🤖 Criar agentes capazes de executar tarefas além da geração de texto.
+- 🛠️ **Superar Limitações de LLMs:** Equipar agentes com capacidade de execução determinística, pesquisa em tempo real e acesso a sistemas proprietários.
+- 🧰 **Dominar Ferramentas Integradas:** Implementar `google_search` para embasamento de dados e `BuiltInCodeExecutor` para processamento matemático preciso.
+- 🔗 **Conectar ao Ecossistema MCP:** Utilizar o *Model Context Protocol* via `McpToolset` (`StdioConnectionParams` e `SseConnectionParams`) para integrar servidores externos com `tool_filter` seguro.
+- ⚙️ **Desenvolver Function Tools Personalizadas:** Criar funções Python com type hints, docstrings detalhadas e dicionários estruturados com a chave `status` para inspeção automática do ADK.
+- 🧠 **Design de Instruções Estratégicas:** Projetar prompts que definem sequenciamento de chamadas, regras de seleção, tratamento diferenciado de erros e suporte a `AgentTool` para delegação especializada.
 
 ---
 
-## 🧩 Conteúdos do módulo
+## 📚 Conteúdo do Módulo
 
-### 01 — 🛠️ Ferramentas e habilidades agênticas
-
-Primeiro contato com o problema de agentes limitados aos conhecimentos disponíveis em seus modelos de linguagem.
-
-**Principais conceitos:**
-
-* Limitações dos dados de treinamento;
-* Ferramentas agênticas;
-* Extensão das capacidades dos agentes;
-* Acesso a informações externas;
-* Execução de tarefas.
-
-As ferramentas permitem que o agente deixe de apenas **processar informações** e passe a utilizar recursos capazes de realizar operações específicas.
+| Seção | Descrição / Foco Principal | Arquivos |
+| :--- | :--- | :---: |
+| **01 — Fundamentos de Ferramentas** | Por que LLMs puros falham em dados em tempo real, cálculos e ações, e como ferramentas estendem suas capacidades. | [Problema](./01-ferramentas-problema.md) / [Solução](./02-ferramentas-solucao.md) |
+| **02 — Ferramentas Integradas** | Uso de `google_search` para grounding na web e `BuiltInCodeExecutor` para execução de Python em sandbox. | [Problema](./03-ferramentas-integradas-problema.md) / [Solução](./04-ferramentas-integradas-solucao.md) |
+| **03 — Model Context Protocol (MCP)** | Conexão de agentes a servidores externos padronizados via `McpToolset` e aplicação de `tool_filter`. | [Problema](./05-mcp-problema.md) / [Solução](./06-mcp-solucao.md) |
+| **04 — Function Tools Personalizadas** | Transformação de funções Python com type hints e docstrings em ferramentas agênticas de negócio. | [Problema](./07-function-tools-problema.md) / [Solução](./08-function-tools-solucao.md) |
+| **05 — Instruções Estratégicas** | Design de prompts para orientar fluxos sequenciais, tratamento de exceções e uso do padrão `AgentTool`. | [Problema](./09-instrucoes-problema.md) / [Solução](./10-instrucoes-solucao.md) |
+| **06 — Conclusão do Módulo** | Síntese sobre a orquestração de ferramentas, boas práticas e mapas de decisão. | [Acessar](./11-conclusao.md) |
+| **07 — Badge de Conclusão** | Registro da conquista da credencial oficial *Add Agent Capabilities with Tools*. | [Acessar](./12-badge-conclusao.md) |
 
 ---
 
-### 02 — 🔧 Ferramentas integradas
-
-Estudo das ferramentas já disponibilizadas para determinadas funcionalidades e tarefas comuns.
-
-**Principais conceitos:**
-
-* Ferramentas integradas;
-* Execução de ações;
-* Pesquisa de informações;
-* Consulta de dados;
-* Automação de tarefas.
-
-Essas ferramentas permitem adicionar capacidades aos agentes sem a necessidade de implementar cada funcionalidade do zero.
-
----
-
-### 03 — 🔗 Model Context Protocol (MCP)
-
-Introdução ao **Model Context Protocol**, um padrão aberto utilizado para conectar modelos de linguagem e agentes a ferramentas, dados e serviços externos.
-
-**Principais conceitos:**
-
-* Model Context Protocol;
-* Servidores MCP;
-* Ferramentas externas;
-* Integração entre agentes e serviços;
-* Comunicação com recursos externos.
-
-O MCP fornece uma forma padronizada de disponibilizar ferramentas para que os agentes possam utilizá-las durante suas execuções.
-
----
-
-### 04 — ⚙️ Ferramentas de função personalizadas
-
-Estudo da criação de ferramentas específicas para atender às necessidades de uma aplicação.
-
-**Principais conceitos:**
-
-* Custom Function Tools;
-* Funções personalizadas;
-* Parâmetros de entrada;
-* Retorno de informações;
-* Integração com agentes.
-
-As ferramentas personalizadas permitem adaptar o agente a **necessidades específicas do negócio ou da aplicação**.
-
----
-
-### 05 — 🧠 Design de instruções estratégicas
-
-Estudo de como orientar o agente sobre **quando, por que e como utilizar determinada ferramenta**.
-
-**Principais conceitos:**
-
-* Instruções estratégicas;
-* Seleção de ferramentas;
-* Orientação do comportamento;
-* Uso adequado das ferramentas;
-* Controle das ações do agente.
-
-Uma ferramenta por si só não garante um comportamento adequado. As instruções precisam orientar o agente sobre como utilizá-la de maneira eficiente.
-
----
-
-## 🤖 Agentes sem ferramentas x agentes com ferramentas
-
-Um dos principais conceitos apresentados no módulo é a diferença entre um agente limitado ao conhecimento do modelo e um agente capaz de **interagir com recursos externos**.
+## ⚙️ A Escolha Certa da Ferramenta
 
 ```text
-🤖 AGENTE SEM FERRAMENTAS
-        │
-        │ conhecimento do modelo
-        ▼
-   📚 Dados de treinamento
-        │
-        ▼
-   💬 Resposta
-```
+                        ❓ Qual ferramenta utilizar?
+                                     │
+           ┌─────────────────────────┼─────────────────────────┐
+           ▼                         ▼                         ▼
+   🔧 FERRAMENTAS INTEGRADAS    🔗 SERVIDORES MCP         🛠️ FUNCTION TOOLS
+   (Pesquisa & Código)          (Ecossistema Existente)   (Lógica de Negócio)
+           │                         │                         │
+           ├─ google_search          ├─ Filesystem, Slack      ├─ Banco de Dados Interno
+           └─ Code Execution         └─ GitHub, PostgreSQL     └─ Cálculos de Frete/Regras
 
-Com ferramentas:
-
-```text
-🤖 AGENTE
-    │
-    ├── 🧠 Modelo de linguagem
-    │
-    ├── 🔎 Pesquisa
-    │
-    ├── 💾 Banco de dados
-    │
-    ├── ⚙️ Funções personalizadas
-    │
-    └── 🔗 Servidor MCP
-            │
-            ▼
-      🌐 Recursos externos
-            │
-            ▼
-      🎯 Resultado da tarefa
-```
-
-As ferramentas adicionam uma camada de **ação e integração** ao agente, permitindo que ele obtenha informações atuais e execute operações que não seriam possíveis apenas com o conhecimento do modelo.
-
----
-
-## 🔄 Fluxo conceitual
-
-```text
-👤 Usuário
-    │
-    ▼
-💬 Solicitação
-    │
-    ▼
-🤖 Agente
-    │
-    ▼
-🧠 Analisa a tarefa
-    │
-    ├── Responde diretamente
-    │
-    └── 🛠️ Utiliza uma ferramenta
-            │
-            ▼
-       🔗 Serviço externo
-            │
-            ▼
-       📊 Resultado
-            │
-            ▼
-       🤖 Agente
-            │
-            ▼
-      🎯 Resposta final
-```
-
-O agente pode decidir quando uma ferramenta é necessária para obter informações ou executar uma determinada ação.
-
----
-
-## 🛠️ Conceitos fundamentais
-
-| Conceito                      | Função                                                             |
-| ----------------------------- | ------------------------------------------------------------------ |
-| 🛠️ **Tools**                 | Ampliam as capacidades dos agentes                                 |
-| 🔧 **Ferramentas integradas** | Fornecem funcionalidades prontas para tarefas comuns               |
-| 🔗 **MCP**                    | Padroniza a conexão entre agentes e recursos externos              |
-| ⚙️ **Function Tools**         | Permitem criar funcionalidades específicas para o agente           |
-| 🧠 **Instructions**           | Orientam o agente sobre como utilizar as ferramentas               |
-| 🌐 **Serviços externos**      | Disponibilizam dados e funcionalidades fora do modelo              |
-| 🎯 **Ações**                  | Permitem que o agente execute tarefas em vez de apenas gerar texto |
-
----
-
-## 💡 Principais aprendizados
-
-### 🧠 Modelos possuem limitações
-
-Um modelo de linguagem possui conhecimento limitado ao seu treinamento e não consegue, sozinho, acessar informações que estejam fora desse contexto.
-
-As ferramentas permitem superar parte dessas limitações.
-
-### 🛠️ Ferramentas ampliam as habilidades dos agentes
-
-Ao conectar ferramentas aos agentes, é possível adicionar capacidades como:
-
-* 🔎 Pesquisa na web;
-* 💻 Execução de código;
-* 💾 Consulta a bancos de dados;
-* 📊 Processamento de informações;
-* ⚙️ Execução de funções;
-* 🌐 Interação com serviços externos.
-
-### 🔗 MCP facilita integrações
-
-O **Model Context Protocol** fornece uma maneira padronizada de disponibilizar ferramentas e recursos externos para agentes e modelos de linguagem.
-
-### ⚙️ Ferramentas personalizadas tornam os agentes mais especializados
-
-Quando as ferramentas integradas não atendem às necessidades da aplicação, é possível criar **funções personalizadas** para fornecer exatamente a capacidade necessária.
-
-### 🧠 Instruções orientam o uso das ferramentas
-
-O agente precisa receber orientações claras para identificar **qual ferramenta utilizar, em qual situação e com qual objetivo**.
-
----
-
-## 🧪 Laboratório prático
-
-### 💰 Adicionar ferramentas de moeda a um agente usando o MCP
-
-Neste laboratório, um agente desenvolvido com o **Google ADK** foi modificado para utilizar um **servidor MCP**, permitindo que ele acessasse uma ferramenta externa para consultar informações atuais sobre criptomoedas.
-
-### 🔹 Antes
-
-Inicialmente, o agente conseguia responder consultas relacionadas a moedas fiduciárias, como:
-
-```text
-💵 USD → EUR
-💵 USD → CNY
-```
-
-Porém, ao solicitar o preço atual do Bitcoin, o agente não possuía uma ferramenta capaz de consultar essa informação externamente.
-
----
-
-### 🔹 Implementação
-
-Foi adicionada ao servidor MCP uma ferramenta personalizada:
-
-```python
-@mcp.tool()
-def get_crypto_price(currency_pair: str = "BTC-USD") -> dict:
-    """Get the current price of a cryptocurrency pair."""
-    url = f"https://api.coinbase.com/v2/prices/{currency_pair}/spot"
-    response = httpx.get(url)
-    return response.json()["data"]
-```
-
-A função utiliza um endpoint público para obter o preço atual do par de criptomoedas solicitado.
-
----
-
-### 🔹 Depois
-
-Após a integração, o agente passou a utilizar a ferramenta:
-
-```text
-👤 Usuário
-    │
-    ▼
-🤖 Agente ADK
-    │
-    ▼
-🔗 Servidor MCP
-    │
-    ▼
-🛠️ get_crypto_price
-    │
-    ▼
-🌐 Coinbase API
-    │
-    ▼
-💰 Preço atual do Bitcoin
-    │
-    ▼
-🤖 Resposta do agente
-```
-
-O agente passou a ser capaz de consultar o **preço atual do Bitcoin** utilizando a ferramenta `get_crypto_price`.
-
----
-
-## 🚀 Competências desenvolvidas
-
-* 🛠️ Integração de **ferramentas** em agentes de IA;
-* 🔗 Utilização do **Model Context Protocol (MCP)**;
-* 🌐 Conexão de agentes com **serviços externos**;
-* ⚙️ Criação de **ferramentas de função personalizadas**;
-* 🧠 Desenvolvimento de instruções para orientar o uso das ferramentas;
-* 🤖 Construção de agentes capazes de **executar tarefas além da geração de texto**;
-* 💰 Integração de uma ferramenta de consulta de preços de criptomoedas.
-
----
-
-## ⚠️ Pontos de atenção
-
-Ao trabalhar com ferramentas e integrações externas, é importante considerar:
-
-* 🔐 Segurança das credenciais e informações utilizadas;
-* 🎯 Quando uma ferramenta realmente é necessária;
-* 🧠 Clareza das instruções fornecidas ao agente;
-* ⚙️ Validação dos parâmetros enviados às ferramentas;
-* 🌐 Disponibilidade dos serviços externos;
-* 🛡️ Tratamento de erros e respostas inesperadas;
-* 🔄 Atualização e manutenção das integrações.
-
-> Ferramentas aumentam significativamente as capacidades dos agentes, mas precisam ser utilizadas de forma **controlada, segura e orientada por instruções claras**.
-
----
-
-## 🗂️ Organização dos estudos
-
-Os conteúdos do módulo seguem uma progressão baseada no problema → solução → verificação:
-
-```text
-01 ── 🛠️ Ferramentas agênticas
- │
- ├── Problema
- ├── Solução
- └── Teste
-        │
-        ▼
-02 ── 🔧 Ferramentas integradas
- │
- ├── Problema
- ├── Solução
- └── Teste
-        │
-        ▼
-03 ── 🔗 Model Context Protocol
- │
- ├── Problema
- ├── Solução
- └── Teste
-        │
-        ▼
-04 ── ⚙️ Ferramentas de função personalizadas
- │
- ├── Problema
- ├── Solução
- └── Teste
-        │
-        ▼
-05 ── 🧠 Design de instruções estratégicas
- │
- ├── Problema
- ├── Solução
- └── Teste
-        │
-        ▼
-📖 Lista de leitura
-        │
-        ▼
-🏁 Conclusão
 ```
 
 ---
 
-## 📌 Estrutura do módulo
+## ⚖️ Comparativo de Abordagens
+
+| Tipo de Ferramenta | Mantenedor | Configuração | Casos de Uso Recomendados |
+| --- | --- | --- | --- |
+| **🔧 Integradas (`tools` / `code_executor`)** | Equipe do ADK | Importar e declarar | Pesquisa Google em tempo real e execução de código Python.|
+| **🔗 MCP (`McpToolset`)** | Comunidade / Fornecedores | `Stdio` / `SseConnection` | Conexão com sistemas de arquivos, GitHub, Slack e bancos de dados.|
+| **⚙️ Função Personalizada (`FunctionTool`)** | Desenvolvedor | Função Python + Metadados | Regras de negócio proprietárias, chamadas de APIs privadas e consultas internas.|
+| **🤖 Agente como Ferramenta (`AgentTool`)** | Desenvolvedor | Encapsulamento de `LlmAgent` | Delegação de subtarefas complexas que exigem raciocínio especializado.|
+
+---
+
+## 🗂️ Estrutura da Pasta
 
 ```text
 05-inclusao-de-habilidades-agenticas-com-ferramentas/
-│
+├── README.md
 ├── 01-ferramentas-problema.md
 ├── 02-ferramentas-solucao.md
 ├── 03-ferramentas-integradas-problema.md
@@ -400,26 +78,16 @@ Os conteúdos do módulo seguem uma progressão baseada no problema → soluçã
 ├── 09-instrucoes-problema.md
 ├── 10-instrucoes-solucao.md
 ├── 11-conclusao.md
-├── 12-badge-conclusao.md
-├── 17-
-├── 18-
-│
-└── README.md
+└── 12-badge-conclusao.md
 ```
+<div align="center">
 
-> Os nomes dos arquivos podem ser ajustados para acompanhar exatamente a nomenclatura utilizada no repositório.
+## 👩‍💻 Autora
 
----
-
-## 🚀 Próxima etapa
-
-Após aprender a ampliar as capacidades dos agentes por meio de **ferramentas, MCP e funções personalizadas**, o próximo passo é avançar para a construção de agentes capazes de **combinar diferentes capacidades, executar workflows e lidar com tarefas cada vez mais complexas**.
-
-Isso permite evoluir de agentes que apenas respondem a solicitações para sistemas capazes de **raciocinar, utilizar recursos externos e executar ações de forma mais autônoma**.
+**Ana Carolina Pereira Ruas**  
+Engenheira Florestal  
+**Foco em Dados, Machine Learning, IA Generativa, LLMs, Agentes e Cloud**  
 
 ---
-
-<p align="center">
-  <strong>🔧 Google Agent Development Kit (ADK)</strong><br>
-  Equipando agentes de IA com ferramentas e habilidades do mundo real.
-</p>
+⭐ *Repositório desenvolvido como parte dos estudos da GEAR — Gemini Enterprise Agent Platform.*
+</div>
